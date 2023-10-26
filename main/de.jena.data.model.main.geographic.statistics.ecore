@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="geographic.statistics" nsURI="http://model.data.jena.de/main/geographic/statistics"
+    nsPrefix="main_geographic_statistics">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation.en" value="data models referring to geographical objects particularly defined for official statistics"/>
+    <details key="documentation" value="Datenmodelle zu geografischen Objekten speziell definiert für die amtliche Statistik"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="common" value="http://model.data.jena.de/main/common"/>
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="ResidentialBlock" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//ValidityDurationObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="residential block in the meaning of a geographical object formed by a complex of adjacent buildings which is bounded by streets, tracks or topographical conditions (e.g. rivers)"/>
+      <details key="documentation" value="räumliches Objekt im Sinne eines vom Straßen-, Wege- und Eisenbahnnetz oder von topographischen Gegebenheiten (z. B. Flüsse) umschlossenen, aus zusammenhängenden Bauten bestehenden Komplexes"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statisticalDistrict" lowerBound="1"
+        eType="#//StatisticalDistrict">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="statistical district in which the residential block ist situated"/>
+        <details key="documentation" value="statistischer Bezirk, in dem sich der Baublock befindet"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StatisticalDistrict" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//ValidityDurationObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="statistical district in the meaning of a geographical object consisting of residential blocks and used in official statistics"/>
+      <details key="documentation" value="Statistischer Bezirk im Sinne eines räumlichen Objektes, das im Bereich der amtlichen Statistik aus Baublöcken gebildet wird"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="planningArea" lowerBound="1"
+        eType="#//PlanningArea">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="strategic area in which the statistical district is situated"/>
+        <details key="documentation" value="statistischer Planungsraum, in dem sich der statistische Bezirk befindet"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlanningArea" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//ValidityDurationObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="planning area in the meaning of a geographical object consisting of statistical districts and used in official statistics"/>
+      <details key="documentation" value="statistischer Planungsraum im Sinne eines räumlichen Objektes, das im Bereich der amtlichen Statistik aus statistischen Bezirken gebildet wird"/>
+    </eAnnotations>
+  </eClassifiers>
+</ecore:EPackage>

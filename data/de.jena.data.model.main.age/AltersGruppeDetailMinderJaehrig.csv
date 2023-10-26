@@ -1,0 +1,7 @@
+uuid;commonMetaData.name;commonMetaData.description;commonMetaData.shortName;yearsFrom;yearsTo
+e1a4dd6c-68e0-11ee-9d1c-d8bbc19bcc5c;0 - 2 Jahre;Alter bis vor Vollendung des 3. Lebensjahres;0-2;0;2
+e1a4f9aa-68e0-11ee-9d1c-d8bbc19bcc5c;3 - 5 Jahre;Alter von der Vollendung des 3. bis vor Vollendung des 6. Lebensjahres;3-5;3;5
+e1a515ca-68e0-11ee-9d1c-d8bbc19bcc5c;6 - 9 Jahre;Alter von der Vollendung des 6. bis vor Vollendung des 10. Lebensjahres;6-9;6;9
+e1a54db0-68e0-11ee-9d1c-d8bbc19bcc5c;10 - 15 Jahre;Alter von der Vollendung des 10. bis vor Vollendung des 16. Lebensjahres;10-15;10;15
+e1a56a34-68e0-11ee-9d1c-d8bbc19bcc5c;16 - 17 Jahre;Alter von der Vollendung des 16. bis vor Vollendung des 18. Lebensjahres;16-17;16;17
+e1a5867c-68e0-11ee-9d1c-d8bbc19bcc5c;ab 18 Jahre;Alter ab Vollendung des 18. Lebensjahres;>=18;18;135

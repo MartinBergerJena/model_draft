@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="statistics" nsURI="http://model.data.jena.de/main/statistics"
+    nsPrefix="main_statistics">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation.en" value="data models referring to official statistics"/>
+    <details key="documentation" value="Datenmodelle aus dem Bereich der amtlichen Statistik"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+    <details key="main_age" value="http://model.data.jena.de/main/age"/>
+    <details key="main_gender" value="http://model.data.jena.de/main/gender"/>
+    <details key="main_geographic_cadastre" value="http://model.data.jena.de/main/geographic/cadastre"/>
+    <details key="main_geographic_statistics" value="http://model.data.jena.de/main/geographic/statistics"/>
+    <details key="main_nationality" value="http://model.data.jena.de/main/nationality"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="SimplePopulation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="number of people for official population statistics"/>
+      <details key="documentation" value="Anzahl der Personen für die Bevölkerungsstatistik"/>
+    </eAnnotations>
+    <eAnnotations source="cube_fact">
+      <details key="kind" value="true"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="count" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="cube_measure">
+        <details key="kind" value="sum"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="number of people"/>
+        <details key="documentation" value="Anzahl der Personen"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="age" lowerBound="1" eType="ecore:EClass http://model.data.jena.de/main/age#//Age">
+      <eAnnotations source="cube_dimension"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="the age of a person"/>
+        <details key="documentation" value="Alter der Person"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="gender" lowerBound="1"
+        eType="ecore:EClass http://model.data.jena.de/main/gender#//GenderNew">
+      <eAnnotations source="cube_dimension"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="gender of a person according to PersStG since its version dated 18 December 2018"/>
+        <details key="documentation" value="Geschlecht der Person i.S.d. PersStG ab der Fassung vom 18.12.2018"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="statisticalDistrict" lowerBound="1"
+        eType="ecore:EClass http://model.data.jena.de/main/geographic/statistics#//StatisticalDistrict">
+      <eAnnotations source="cube_dimension"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="the statistical district a person's residence is situated in"/>
+        <details key="documentation" value="statistischer Bezirk, in dem der Wohnsitz einer Person liegt"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="year" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="cube_dimension"/>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="year in which the dataset is valid"/>
+        <details key="documentation" value="Jahr, für den der Datensatz gilt"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ComplexPopulation" eSuperTypes="#//SimplePopulation">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="number of people for official population statistics"/>
+      <details key="documentation" value="Anzahl der Personen für die Bevölkerungsstatistik"/>
+    </eAnnotations>
+    <eAnnotations source="cube_fact">
+      <details key="kind" value="true"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="birthDate" lowerBound="1"
+        eType="ecore:EClass http://model.data.jena.de/main/age#//BirthDate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="birthDate of a person"/>
+        <details key="documentation" value="Geburtsdatum der Person"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="nationality" lowerBound="1"
+        eType="ecore:EClass http://model.data.jena.de/main/nationality#//Nationality">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="nationality of a person according to StAG"/>
+        <details key="documentation" value="Staatsangehörigkeit einer Person i.S.d. StAG"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lot" lowerBound="1" eType="ecore:EClass http://model.data.jena.de/main/geographic/cadastre#//Lot">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="the lot a person's residence is situated in"/>
+        <details key="documentation" value="Flurstück, in dem der Wohnsitz einer Person liegt"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

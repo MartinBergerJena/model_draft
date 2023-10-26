@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="common" nsURI="http://model.data.jena.de/main/common" nsPrefix="main_common">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation.en" value="package of basic data models referred to repeatedly"/>
+    <details key="documentation" value="Paket mit Basis-Datenmodellen, die immer wieder verwendet werden"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EDataType" name="UUID" instanceClassName="java.lang.String">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="Universally Unique IDentifier (UUID) according to https://www.ietf.org/rfc/rfc4122.txt"/>
+      <details key="documentation" value="Universally Unique IDentifier (UUID) gemäß https://www.ietf.org/rfc/rfc4122.txt"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="GeoJSON" instanceClassName="java.lang.String">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="A GeoJSON  according to https://www.ietf.org/rfc/rfc7946.txt"/>
+      <details key="documentation" value="GeoJSON  gemäß https://www.ietf.org/rfc/rfc7946.txt"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UniqueIdentifiableObject" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="basic class for all objects identifiable by UUID"/>
+      <details key="documentation" value="Basisklasse für alle mit UUID identifizierbaren Objekte"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="uuid" lowerBound="1" eType="#//UUID"
+        iD="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="identifies each UniqueIdentifiableObject by a unified and unique identifier"/>
+        <details key="documentation" value="identifiziert jedes UniqueIdentifiableObject durch eine einheitliche und eindeutige ID"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommonMetaData">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="basic class providing attributes for named and/or described objects"/>
+      <details key="documentation" value="Basisklasse mit Attributen für Objekte, die einen Namen und/oder eine Beschreibung aufweisen"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="human readable name"/>
+        <details key="documentation" value="menschenlesbarer Name"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="human readable description"/>
+        <details key="documentation" value="menschenlesbare Beschreibung"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="shortName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="human readable short name"/>
+        <details key="documentation" value="menschenlesbarer Kurzname"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CommonMetaDataObject" abstract="true"
+      eSuperTypes="#//UniqueIdentifiableObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="basic class of all UniqueIdentifiableObjects having a human readable name and/or description"/>
+      <details key="documentation" value="Basisklasse für alle UniqueIdentifiableObjects, die einen menschenlesbaren Namen und/oder Beschreibung aufweisen"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="commonMetaData" lowerBound="1"
+        eType="#//CommonMetaData" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="the CommonMetaData of an object"/>
+        <details key="documentation" value="CommonMetaData eines Objekts"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeographicalData">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="basic class providing attributes for geographical objects"/>
+      <details key="documentation" value="Basisklasse, die Attribute für geografische Objekte bereitstellt"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="mainGeometry" lowerBound="1"
+        eType="#//GeoJSON">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="standard description of a geographic object in form of a GeoJSON"/>
+        <details key="documentation" value="Standardbeschreibung eines geografischen Objekts in Form eines GeoJSON"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="GeographicalObject" abstract="true"
+      eSuperTypes="#//UniqueIdentifiableObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="basic class of all NamedObjects that have a geographic dimension"/>
+      <details key="documentation" value="Basisklasse für NamedObjects, die eine geografische Dimension aufweisen"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geographicalData" lowerBound="1"
+        eType="#//GeographicalData" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="the GeographicalData of an object"/>
+        <details key="documentation" value="GeographicalData eines Objekts"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponsibilityData">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="basic class providing attributes for different types of responsibilities concerning an object"/>
+      <details key="documentation" value="Basisklasse mit Attributen für verschiedene Arten der Zuständigkeit in Bezug auf ein Objekt"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="responsibilityType" lowerBound="1"
+        eType="#//ResponsibilityType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="type of responsibility (e.g. owner, maintenance,...)"/>
+        <details key="documentation" value="Art der Zuständigkeit (z.B. Eigentümer, Pflege/Unterhaltung, ...)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="organisationalUnit" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="responsible organisational unit"/>
+        <details key="documentation" value="zuständige Organisationseinheit"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ResponsibilityObject" abstract="true"
+      eSuperTypes="#//UniqueIdentifiableObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="basic class of all UniqueIdentifiableObject that have one or more responsibilities"/>
+      <details key="documentation" value="Basisklasse für UniqueIdentifiableObject, die eine oder mehrere Zuständigkeiten aufweisen"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responsibilityData" lowerBound="1"
+        eType="#//ResponsibilityData" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="the ResponsibilityData of an object"/>
+        <details key="documentation" value="ResponsibilityData eines Objekts"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ValidityDurationObject" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="basic class containing the duration in which an object is valid"/>
+      <details key="documentation" value="Basisklasse für den Zeitraum, in dem ein Objekt gültig ist"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="validityDuration" lowerBound="1"
+        eType="#//SpecifiedDateInterval" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="specified date interval in which an object is valid"/>
+        <details key="documentation" value="spezifiziertes Datumsintervall, in dem ein Objekt gültig ist"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntervalLimitSpecifier" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="base class providing attributes that define the limit types (value included/excluded) in intervals"/>
+      <details key="documentation" value="Basisklasse mit Attributen, die die Art der Grenzwerte von Intervallen (Ein- oder Ausschließen des jeweiligen Wertes) definieren"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowerIntervalLimitType"
+        lowerBound="1" eType="#//IntervalLimitType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="limit type (included/excluded) for the lower limit of an interval"/>
+        <details key="documentation" value="Art der Untergrenze (Wert ein- oder ausschließen) eines Intervalls"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="upperIntervalLimitType"
+        lowerBound="1" eType="#//IntervalLimitType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="limit type (included/excluded) for the upper limit of an interval"/>
+        <details key="documentation" value="Art der Obergrenze (Wert ein- oder ausschließen) eines Intervalls"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DateInterval">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="Basic class for date intervals"/>
+      <details key="documentation" value="Basisklasse für Datumsintervalle"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="lower limit of a date interval"/>
+        <details key="documentation" value="Untergrenze des Datumsintervalls"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="upper limit of a date interval"/>
+        <details key="documentation" value="Obergrenze des Datumsintervalls"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntegerInterval">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="Basic class for integer intervals"/>
+      <details key="documentation" value="Basisklasse für ganzzahlige Intervalle"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="from" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="lower limit of an integer interval"/>
+        <details key="documentation" value="Untergrenze des ganzzahligen Intervalls"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="to" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="upper limit of an integer interval"/>
+        <details key="documentation" value="Obergrenze des ganzzahligen Intervalls"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpecifiedDateInterval" eSuperTypes="#//DateInterval #//IntervalLimitSpecifier">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="Basic class for date intervals"/>
+      <details key="documentation" value="Basisklasse für Datumsintervalle"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SpecifiedIntegerInterval" eSuperTypes="#//IntegerInterval #//IntervalLimitSpecifier">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="Basic class for integer intervals"/>
+      <details key="documentation" value="Basisklasse für ganzzahlige Intervalle"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="ResponsibilityType">
+    <eLiterals name="Owner" literal="OWNERSHIP"/>
+    <eLiterals name="Maintenance" literal="MAINTENANCE"/>
+    <eLiterals name="Organisational" literal="ORGANISATIONAL"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="IntervalLimitType">
+    <eLiterals name="Inclusive" literal="INCLUSIVE"/>
+    <eLiterals name="Exclusive" literal="EXCLUSIVE"/>
+  </eClassifiers>
+</ecore:EPackage>

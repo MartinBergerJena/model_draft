@@ -1,0 +1,13 @@
+uuid;commonMetaData.name;commonMetaData.description;commonMetaData.shortName;yearsFrom;yearsTo
+e1a383d6-68e0-11ee-9d1c-d8bbc19bcc5c;0 - 9 Jahre;Alter bis vor Vollendung des 10. Lebensjahres;0-9;0;9
+e1a3a0a0-68e0-11ee-9d1c-d8bbc19bcc5c;10 - 19 Jahre;Alter von der Vollendung des 10. bis vor Vollendung des 20. Lebensjahres;10-19;10;19
+e1a3bc84-68e0-11ee-9d1c-d8bbc19bcc5c;20 - 29 Jahre;Alter von der Vollendung des 20. bis vor Vollendung des 30. Lebensjahres;20-29;20;29
+e1a3d85e-68e0-11ee-9d1c-d8bbc19bcc5c;30 - 39 Jahre;Alter von der Vollendung des 30. bis vor Vollendung des 40. Lebensjahres;30-39;30;39
+e1a3f442-68e0-11ee-9d1c-d8bbc19bcc5c;40 - 49 Jahre;Alter von der Vollendung des 40. bis vor Vollendung des 50. Lebensjahres;40-49;40;49
+e1a41080-68e0-11ee-9d1c-d8bbc19bcc5c;50 - 59 Jahre;Alter von der Vollendung des 50. bis vor Vollendung des 60. Lebensjahres;50-59;50;59
+e1a42ce6-68e0-11ee-9d1c-d8bbc19bcc5c;60 - 69 Jahre;Alter von der Vollendung des 60. bis vor Vollendung des 70. Lebensjahres;60-69;60;69
+e1a44924-68e0-11ee-9d1c-d8bbc19bcc5c;70 - 79 Jahre;Alter von der Vollendung des 70. bis vor Vollendung des 80. Lebensjahres;70-79;70;79
+e1a4654e-68e0-11ee-9d1c-d8bbc19bcc5c;80 - 89 Jahre;Alter von der Vollendung des 80. bis vor Vollendung des 90. Lebensjahres;80-89;80;89
+e1a48362-68e0-11ee-9d1c-d8bbc19bcc5c;90 - 99 Jahre;Alter von der Vollendung des 90. bis vor Vollendung des 100. Lebensjahres;90-99;90;99
+e1a49f64-68e0-11ee-9d1c-d8bbc19bcc5c;100 - 109 Jahre;Alter von der Vollendung des 100. bis vor Vollendung des 110. Lebensjahres;100-109;100;109
+e1a4bb98-68e0-11ee-9d1c-d8bbc19bcc5c;ab 110 Jahre;Alter ab Vollendung des 110. Lebensjahres;>=110;110;135

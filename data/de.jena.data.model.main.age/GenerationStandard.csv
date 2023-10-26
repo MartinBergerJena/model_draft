@@ -1,0 +1,9 @@
+uuid;commonMetaData.name;commonMetaData.description;commonMetaData.shortName;fromDate;toDate;lowerLimitType;upperLimiType
+e18ec374-68e0-11ee-9d1c-d8bbc19bcc5c;Lost Generation;Generation der Geburtsjahrgänge von 1883 bis 1900;;01.01.1983;01.01.1901;INCLUSIVE;EXCLUSIVE
+e18ee746-68e0-11ee-9d1c-d8bbc19bcc5c;Greatest/G.I. Generation;Generation der Geburtsjahrgänge von 1901 bis 1927;;01.01.1901;01.01.1928;INCLUSIVE;EXCLUSIVE
+e18f0604-68e0-11ee-9d1c-d8bbc19bcc5c;Silent Generation;Generation der Geburtsjahrgänge von 1928 bis 1945;;01.01.1928;01.01.1946;INCLUSIVE;EXCLUSIVE
+e18f230a-68e0-11ee-9d1c-d8bbc19bcc5c;Baby Boomers;Generation der Geburtsjahrgänge von 1946 bis 1964;;01.01.1946;01.01.1965;INCLUSIVE;EXCLUSIVE
+e18f3ffc-68e0-11ee-9d1c-d8bbc19bcc5c;Generation X;Generation der Geburtsjahrgänge von 1965 bis 1980;;01.01.1965;01.01.1981;INCLUSIVE;EXCLUSIVE
+e18f5c3a-68e0-11ee-9d1c-d8bbc19bcc5c;Millenials/Generation Y;Generation der Geburtsjahrgänge von 1981 bis 1996;;01.01.1981;01.01.1997;INCLUSIVE;EXCLUSIVE
+e18f78a0-68e0-11ee-9d1c-d8bbc19bcc5c;Zoomers/Generation Z;Generation der Geburtsjahrgänge von 1997 bis 2012;;01.01.1997;01.01.2013;INCLUSIVE;EXCLUSIVE
+e18f9498-68e0-11ee-9d1c-d8bbc19bcc5c;Generation Alpha;Generation der Geburtsjahrgänge von 2013 bis ;;01.01.2013;NULL;INCLUSIVE;EXCLUSIVE

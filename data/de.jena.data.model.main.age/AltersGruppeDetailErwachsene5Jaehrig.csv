@@ -1,0 +1,13 @@
+uuid;commonMetaData.name;commonMetaData.description;commonMetaData.shortName;yearsFrom;yearsTo
+e1a0d5be-68e0-11ee-9d1c-d8bbc19bcc5c;0 bis 17 Jahre;Alter bis vor Vollendung des 18. Lebensjahres;0-17;0;17
+e1a0f238-68e0-11ee-9d1c-d8bbc19bcc5c;18 bis 24 Jahre;Alter von der Vollendung des 18. bis vor Vollendung des 25. Lebensjahres;18-24;18;24
+e1a10e6c-68e0-11ee-9d1c-d8bbc19bcc5c;25 bis 29 Jahre;Alter von der Vollendung des 25. bis vor Vollendung des 30. Lebensjahres;25-29;25;29
+e1a12afa-68e0-11ee-9d1c-d8bbc19bcc5c;30 bis 34 Jahre;Alter von der Vollendung des 30. bis vor Vollendung des 35. Lebensjahres;30-34;30;34
+e1a14724-68e0-11ee-9d1c-d8bbc19bcc5c;35 bis 39 Jahre;Alter von der Vollendung des 35. bis vor Vollendung des 40. Lebensjahres;35-39;35;39
+e1a16344-68e0-11ee-9d1c-d8bbc19bcc5c;40 bis 44 Jahre;Alter von der Vollendung des 40. bis vor Vollendung des 45. Lebensjahres;40-44;40;44
+e1a17faa-68e0-11ee-9d1c-d8bbc19bcc5c;45 bis 49 Jahre;Alter von der Vollendung des 45. bis vor Vollendung des 50. Lebensjahres;45-49;45;49
+e1a19bac-68e0-11ee-9d1c-d8bbc19bcc5c;50 bis 54 Jahre;Alter von der Vollendung des 50. bis vor Vollendung des 55. Lebensjahres;50-54;50;54
+e1a1b830-68e0-11ee-9d1c-d8bbc19bcc5c;55 bis 59 Jahre;Alter von der Vollendung des 55. bis vor Vollendung des 60. Lebensjahres;55-59;55;59
+e1a1d464-68e0-11ee-9d1c-d8bbc19bcc5c;60 bis 64 Jahre;Alter von der Vollendung des 60. bis vor Vollendung des 65. Lebensjahres;60-64;60;64
+e1a1f052-68e0-11ee-9d1c-d8bbc19bcc5c;64 bis 69 Jahre;Alter von der Vollendung des 64. bis vor Vollendung des 70. Lebensjahres;64-69;64;69
+e1a20cae-68e0-11ee-9d1c-d8bbc19bcc5c;ab 70 Jahre;Alter ab der Vollendung des 70. Lebensjahres;>=70;70;135

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="geographic.cadastre" nsURI="http://model.data.jena.de/main/geographic/cadastre"
+    nsPrefix="main_geographic_cadastre">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation.en" value="data models referring to geographical objects representing political areas"/>
+    <details key="documentation" value="Datenmodelle zu geografischen Objekten bezüglich politischer Gebiete"/>
+  </eAnnotations>
+  <eAnnotations source="http://www.eclipse.org/OCL/Import">
+    <details key="common" value="http://model.data.jena.de/main/common"/>
+    <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="CadastrialBoundary" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//ValidityDurationObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="geographical object representig a cadastrial boundary according to federal surveying law"/>
+      <details key="documentation" value="geografisches Objekt, das eine Gemarkung im Sinne der Landesvermessungsgesetze darstellt"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cadastrialBoundaryNumber"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="boundary number determined by the land surveying offices of the federal states"/>
+        <details key="documentation" value="Gemarkungsnummer gemäß der Vermessungsbehörde des jeweiligen Bundeslandes"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CadastrialDistrict" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//ValidityDurationObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="geographical object representig a cadastrial district according to federal surveying law"/>
+      <details key="documentation" value="geografisches Objekt, das eine Flur im Sinne der Landesvermessungsgesetze darstellt"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cadastrialDistrictNumber"
+        lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="cadastrial district number determined by the land surveying offices of the federal states"/>
+        <details key="documentation" value="Flurnummer gemäß der Vermessungsbehörde des jeweiligen Bundeslandes"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cadastrialBoundary" lowerBound="1"
+        eType="#//CadastrialBoundary">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="cadastral boundary the cadastrial district belongs to"/>
+        <details key="documentation" value="Gemarkung, zu der die Flur gehört"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Lot" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//ValidityDurationObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="geographical object representig a cadastrial lot according to federal surveying law"/>
+      <details key="documentation" value="geografisches Objekt, das ein Flurstück im Sinne der Landesvermessungsgesetze darstellt"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lotNumerator" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="numerator of the lot number determined by the land surveying offices of the federal states"/>
+        <details key="documentation" value="Zähler der Flurstücksnummer gemäß der Vermessungsbehörde des jeweiligen Bundeslandes"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lotDenominator" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="denominator of the lot number determined by the land surveying offices of the federal states"/>
+        <details key="documentation" value="Nenner der Flurstücksnummer gemäß der Vermessungsbehörde des jeweiligen Bundeslandes"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cadastrialDistrict" eType="#//CadastrialDistrict">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="cadastral district the lot belongs to"/>
+        <details key="documentation" value="Flur, zu der das Flurstück gehört"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cadastrialBoundary" lowerBound="1"
+        eType="#//CadastrialBoundary">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="cadastral boundary the lot belongs to"/>
+        <details key="documentation" value="Gemarkung, zu der das Flurstück gehört"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

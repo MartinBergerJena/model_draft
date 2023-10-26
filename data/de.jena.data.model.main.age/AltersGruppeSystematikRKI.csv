@@ -1,0 +1,7 @@
+uuid;commonMetaData.name;commonMetaData.description;commonMetaData.shortName;yearsFrom;yearsTo
+e1a5a300-68e0-11ee-9d1c-d8bbc19bcc5c;0 - 3 Jahre;Alter bis vor Vollendung des 4. Lebensjahres;0-3;0;3
+e1a5bf20-68e0-11ee-9d1c-d8bbc19bcc5c;4 - 14 Jahre;Alter von der Vollendung des 4. bis vor Vollendung des 15. Lebensjahres;4-14;4;14
+e1a5db40-68e0-11ee-9d1c-d8bbc19bcc5c;15 - 34 Jahre;Alter von der Vollendung des 15. bis vor Vollendung des 35. Lebensjahres;15-34;15;34
+e1a5f7ec-68e0-11ee-9d1c-d8bbc19bcc5c;35 - 59 Jahre;Alter von der Vollendung des 35. bis vor Vollendung des 60. Lebensjahres;35-59;35;59
+e1a614ac-68e0-11ee-9d1c-d8bbc19bcc5c;60 - 79 Jahre;Alter von der Vollendung des 60. bis vor Vollendung des 80. Lebensjahres;60-79;60;79
+e1a630fe-68e0-11ee-9d1c-d8bbc19bcc5c;ab 80 Jahre;Alter ab Vollendung des 80. Lebensjahres;>=80;80;135
