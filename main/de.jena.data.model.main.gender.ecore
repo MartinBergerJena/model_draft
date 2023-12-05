@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="gender" nsURI="http://model.data.jena.de/main/main/gender" nsPrefix="main_gender">
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="gender" nsURI="http://model.data.jena.de/main/gender" nsPrefix="main_gender">
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="documentation.en" value="data models referring to gender"/>
     <details key="documentation" value="Datenmodelle bezüglich Geschlecht"/>
   </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
-    <details key="common" value="http://model.data.jena.de/main/common"/>
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+    <details key="main_common" value="http://model.data.jena.de/main/common"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="Gender" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="Gender" abstract="true" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="basic class providing common attributes used by specific gender structures"/>
       <details key="documentation" value="Basisklasse mit allgemeingültigen Attributen für konkrete Geschlechterstrukturen"/>

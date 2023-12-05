@@ -7,9 +7,9 @@
     <details key="documentation" value="Datenmodelle bezüglich der geopolitischen Zugehörigkeit (z.B. Staatsangehörigkeit) von Personen"/>
   </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
-    <details key="common" value="http://model.data.jena.de/main/common"/>
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
-    <details key="geographic_politics" value="http://model.data.jena.de/main/geographic/politics"/>
+    <details key="main_common" value="http://model.data.jena.de/main/common"/>
+    <details key="main_geographic_politics" value="http://model.data.jena.de/main/geographic/politics"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="PlanetaryAffiliation" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//ValidityDurationObject">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

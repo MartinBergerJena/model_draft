@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="article" nsURI="http://model.data.jena.de/main/article" nsPrefix="article">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="Datenmodelle bezüglich Artikel"/>
+    <details key="documentation.en" value="data models referring to articles"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="Article" abstract="true" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//SemanticIdentifiableObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Basisklasse mit allgemeingültigen Attributen für konkrete Artikel"/>
+      <details key="documentation.en" value="basic class providing common attributes used by specific types of articles"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="articleText" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Text des Artikels in Markdown"/>
+        <details key="documentation.en" value="text of the article written in markdown"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="language" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Sprache, in der der Artikel verfasst ist"/>
+        <details key="documentation.en" value="language in which the article ist written"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="languageLevel" lowerBound="1"
+        eType="#//LanguageLevel">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Sprachniveau des Artikels"/>
+        <details key="documentation.en" value="language level of the article"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mainArticle" eType="#//Article">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Hauptartikel, zu dem der Artikel gehört (zur Clusterung inhaltsgleicher Artikel)"/>
+        <details key="documentaion.en" value="main article the current article belongs to (clustering articles of same content)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="references" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Verweis auf weitere Ressourcen zum Artikelinhalt"/>
+        <details key="documentaion.en" value="reference to further ressources concerning the content of the article"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="literatures" upperBound="-1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Quellen zum Artikelinhalt"/>
+        <details key="documentation.en" value="sources related to the content of the article"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pictures" upperBound="-1"
+        eType="#//Picture">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="mit dem Artikel verknüpfte Bilder"/>
+        <details key="documentation.en" value="images associated with the the article"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="identifiableObject" lowerBound="1"
+        eType="ecore:EClass http://model.data.jena.de/main/common#//UniqueIdentifiableObject">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Objekt, auf das sich der Artikel bezieht"/>
+        <details key="documentation.en" value="object which the article refers to"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="LanguageLevel">
+    <eLiterals name="Normal" literal="NORMAL"/>
+    <eLiterals name="Easy" literal="EASY"/>
+    <eLiterals name="Children" literal="CHILDREN"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Picture" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Bild(datei) für Artikel"/>
+      <details key="documentation.en" value="image (file) for articles"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Collection" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Sammlung zur Clusterung von Artikeln"/>
+      <details key="documentation.en" value="collection to cluster articles "/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="article" lowerBound="1"
+        upperBound="-1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Artikel, der zur Sammlung gehört"/>
+        <details key="documentation.en" value="article belonging to the collection"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parent" upperBound="-1"
+        eType="#//Collection">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="übergeordnete Sammlung, in der die jeweilige Sammlung enthalten ist"/>
+        <details key="documentation.en" value="parent collection which contains the current collection"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>

@@ -6,8 +6,8 @@
     <details key="documentation" value="Datenmodelle bezüglich Alter"/>
   </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
-    <details key="common" value="http://model.data.jena.de/main/common"/>
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
+    <details key="main_common" value="http://model.data.jena.de/main/common"/>
   </eAnnotations>
   <eClassifiers xsi:type="ecore:EClass" name="Age" eSuperTypes="http://model.data.jena.de/main/common#//UniqueIdentifiableObject">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">

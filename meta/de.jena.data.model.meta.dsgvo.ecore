@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="dsgvo" nsURI="http://model.data.jena.de/meta/dsgvo" nsPrefix="dsgvo">
+  <eClassifiers xsi:type="ecore:EClass" name="Verfahren">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="datasets" upperBound="-1"
+        eType="#//Datensatz" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Verfahrensverzeichnis">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="verfahens" upperBound="-1"
+        eType="#//Verfahren"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Datensatz">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="modelClass" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EClass"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="privacyLevel" eType="#//PrivacyLevel"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fields" eType="#//Feld"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PrivacyLevel">
+    <eLiterals name="NONE"/>
+    <eLiterals name="LOW"/>
+    <eLiterals name="DEFAULT"/>
+    <eLiterals name="HIGH"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="PrivacyType">
+    <eLiterals name="RELIGION"/>
+    <eLiterals name="MEDICAL"/>
+    <eLiterals name="SEXUAL_ORIENTATION"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Feld">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" eType="ecore:EClass platform:/plugin/org.eclipse.emf.ecore/model/Ecore.ecore#//EStructuralFeature"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PrivacyType"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -90,8 +90,8 @@
       <details key="documentation.en" value="basic class of all NamedObjects that have a geographic dimension"/>
       <details key="documentation" value="Basisklasse für NamedObjects, die eine geografische Dimension aufweisen"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="geographicalData" lowerBound="1"
-        eType="#//GeographicalData" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="geographicalData" eType="#//GeographicalData"
+        containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="the GeographicalData of an object"/>
         <details key="documentation" value="GeographicalData eines Objekts"/>
@@ -135,7 +135,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="ValidityDurationObject" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="basic class containing the duration in which an object is valid"/>
-      <details key="documentation" value="Basisklasse für den Zeitraum, in dem ein Objekt gültig ist"/>
+      <details key="documentation" value="Basisklasse für den Zeitraum, in dem ein Objekt gültig ist."/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="validityDuration" lowerBound="1"
         eType="#//SpecifiedDateInterval" containment="true">
@@ -222,4 +222,38 @@
     <eLiterals name="Inclusive" literal="INCLUSIVE"/>
     <eLiterals name="Exclusive" literal="EXCLUSIVE"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SemanticIdentifiableObject" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Basisklasse für Objekte, die Referenzen zu Objekten in semantischen Modellen aufweisen"/>
+      <details key="documentation.en" value="basisc class of objects having references to objects in semantic models"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semanticIdentifiers" upperBound="-1"
+        eType="#//SemanticIdentifier" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="semantische Referenz eines Objekts"/>
+        <details key="documentation.en" value="semantic reference of an object"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SemanticIdentifier">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Basisklasse mit Attributen für Verweise auf entsprechende Objekte in semantischen Modelle"/>
+      <details key="documentation.en" value="basic class providing attributes for references to corresponding objects in semantic models"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="source" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Quelle des semantischen Modells, auf das Bezug genommen wird (nicht veränderlicher Teil der URI)"/>
+        <details key="documentation.en" value="source of the semantic model referred to (constant part of the URI)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="identifier" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentaion" value="ID des Objekts im semantischen modell (veränderlicher Teil der URI)"/>
+        <details key="documentation.en" value="ID of the object according to the semantic model (variable part of the URI)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="EInstant" instanceClassName="java.time.Instant"/>
 </ecore:EPackage>

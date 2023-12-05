@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="rescue" nsURI="http://model.data.jena.de/main/rescue" nsPrefix="rescue">
+  <eClassifiers xsi:type="ecore:EClass" name="IncidentReport" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Bericht, der von der Feuerwehr zu einem Brand- oder Hilfeleistungseinsatz erstellt wird"/>
+      <details key="documentation.en" value="report given by a fire brigade concerning a fire or rescue incident"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventTime" lowerBound="1"
+        eType="ecore:EDataType http://model.data.jena.de/main/common#//EInstant">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zeitpunkt des Einsatzbeginns"/>
+        <details key="documentation.en" value="timestamp of the beginning of the emergency response"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="eventEndTime" eType="ecore:EDataType http://model.data.jena.de/main/common#//EInstant">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Zeitpunkt des Einsatzendes"/>
+        <details key="documentation.en" value="timestamp of the end of the emergency response"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Material" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Geräte und Verbrauchsmaterialien für Feuerwehreinsätze"/>
+      <details key="documentation.en" value="devices and consumable material for fire or rescue incidents"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="measuringUnit" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Einheit, in der der Einsatz des Materials oder Gerätes bemessen wird"/>
+        <details key="documentation.en" value="unit measuring the input of the item or material"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="materialType" lowerBound="1"
+        eType="#//MaterialType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Art des eingesetzten Materials"/>
+        <details key="documentation.en" value="type of input material"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MaterialUsage" eSuperTypes="http://model.data.jena.de/main/common#//UniqueIdentifiableObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Materialeinsatz im konkreten Feuerwehreinsatz"/>
+      <details key="documentation.en" value="used material in a specific fire or rescue incident"/>
+    </eAnnotations>
+    <eAnnotations source="cube_fact">
+      <details key="kind" value="true"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="amount" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat">
+      <eAnnotations source="cube_fact">
+        <details key="kind" value="sum"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Menge des im jeweiligen Einsatz eingesetzten Materials"/>
+        <details key="documentation.en" value="amount of used material in a specific incident"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="material" lowerBound="1"
+        eType="#//Material">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="im jeweiligen Einsatz eingesetztes Material"/>
+        <details key="documentation.en" value="material used in the specific incident"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incidentReport" lowerBound="1"
+        eType="#//IncidentReport">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Referenz zum zugehörigen Einsatzbericht"/>
+        <details key="documentation.en" value="reference to the related incident report"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Unit" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Einheiten (Fahzeuge in bestimmter Funktion) für Feuerwehreinsätze"/>
+      <details key="documentation.en" value="units (vehicles in a specific capacity) for fire or rescue incidents"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="UnitUsage" eSuperTypes="http://model.data.jena.de/main/common#//UniqueIdentifiableObject">
+    <eAnnotations source="cube_fact">
+      <details key="kind" value="true"/>
+    </eAnnotations>
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Einsatz der Einheiten im konkreten Feuerwehreinsatz"/>
+      <details key="documentation.en" value="used units in a specific fire or rescue incident"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="count" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="cube_fact">
+        <details key="kind" value="sum"/>
+      </eAnnotations>
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Anzahl der im jeweiligen Einsatz eingesetzten Einheiten"/>
+        <details key="documentation.en" value="number of used units in a specific incident"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="unit" lowerBound="1" eType="#//Unit">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="im jeweiligen Einsatz eingesetzte Einheit"/>
+        <details key="documentation.en" value="unit used in the specific incident"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="incidentReport" lowerBound="1"
+        eType="#//IncidentReport">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="Referenz zum zugehörigen Einsatzbericht"/>
+        <details key="documentation.en" value="reference to the related incident report"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="MaterialType">
+    <eLiterals name="Material" literal="MATERIAL"/>
+    <eLiterals name="Device" literal="DEVICE"/>
+  </eClassifiers>
+</ecore:EPackage>

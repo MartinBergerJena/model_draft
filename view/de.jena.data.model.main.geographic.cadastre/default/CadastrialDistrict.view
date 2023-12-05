@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org.eclipse.emf.ecp.view.model:View xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:org.eclipse.emf.ecp.view.model="http://org/eclipse/emf/ecp/view/model/1180" xmi:id="_1Sc5kHPVEe64K71EawMJlg" name="CadastrialDistrict">
+  <rootEClass href="http://model.data.jena.de/main/geographic/cadastre#//CadastrialDistrict"/>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_1SeHsHPVEe64K71EawMJlg" name="Control uuid">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_1SeHsXPVEe64K71EawMJlg">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://model.data.jena.de/main/common#//UniqueIdentifiableObject/uuid"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_1SeHsnPVEe64K71EawMJlg" name="Control geographicalData">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_1SeHs3PVEe64K71EawMJlg">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://model.data.jena.de/main/common#//GeographicalObject/geographicalData"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_1SeHtHPVEe64K71EawMJlg" name="Control commonMetaData">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_1SeHtXPVEe64K71EawMJlg">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://model.data.jena.de/main/common#//CommonMetaDataObject/commonMetaData"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_1SeHtnPVEe64K71EawMJlg" name="Control validityDuration">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_1SeHt3PVEe64K71EawMJlg">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://model.data.jena.de/main/common#//ValidityDurationObject/validityDuration"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_1SeHuHPVEe64K71EawMJlg" name="Control cadastrialDistrictNumber">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_1SeHuXPVEe64K71EawMJlg">
+      <domainModelEFeature xsi:type="ecore:EAttribute" href="http://model.data.jena.de/main/geographic/cadastre#//CadastrialDistrict/cadastrialDistrictNumber"/>
+    </domainModelReference>
+  </children>
+  <children xsi:type="org.eclipse.emf.ecp.view.model:Control" xmi:id="_1SeHunPVEe64K71EawMJlg" name="Control cadastrialBoundary">
+    <domainModelReference xsi:type="org.eclipse.emf.ecp.view.model:FeaturePathDomainModelReference" xmi:id="_1SeHu3PVEe64K71EawMJlg">
+      <domainModelEFeature xsi:type="ecore:EReference" href="http://model.data.jena.de/main/geographic/cadastre#//CadastrialDistrict/cadastrialBoundary"/>
+    </domainModelReference>
+  </children>
+</org.eclipse.emf.ecp.view.model:View>
