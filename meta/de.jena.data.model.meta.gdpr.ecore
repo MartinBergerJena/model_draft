@@ -32,7 +32,7 @@
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataProcessings" lowerBound="1"
-        upperBound="-1" eType="#//DataProcessing">
+        upperBound="-1" eType="#//DataProcessing" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -40,7 +40,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contactControllerGlobal"
-        lowerBound="1" eType="#//ContactInformation">
+        lowerBound="1" eType="#//ContactInformation" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -48,7 +48,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contactControllerInternal"
-        lowerBound="1" eType="#//ContactInformation">
+        lowerBound="1" eType="#//ContactInformation" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -56,7 +56,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contactJointResponsibilities"
-        upperBound="-1" eType="#//ContactInformation">
+        upperBound="-1" eType="#//ContactInformation" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -64,7 +64,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contactPrivacyOfficer"
-        lowerBound="1" eType="#//ContactInformation">
+        lowerBound="1" eType="#//ContactInformation" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -72,7 +72,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contactCommissionedProcessor"
-        eType="#//ContactInformation">
+        eType="#//ContactInformation" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -137,7 +137,7 @@
         <details key="name.de" value="rechtsGrundlage"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataProcessingLawfulnesses"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataProcessingLawfulness"
         lowerBound="1" upperBound="-1" eType="#//DataProcessingLawfulness" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataTransmissions" upperBound="-1"
         eType="#//DataTransmission" containment="true">
@@ -159,7 +159,7 @@
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="validTo" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DataProcessingLawfulness" eSuperTypes="#//UniqueIdentifiableObject">
+  <eClassifiers xsi:type="ecore:EClass" name="DataProcessingLawfulness">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value=" "/>
       <details key="documentation.en" value=" "/>
@@ -182,14 +182,14 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DataTransmission" eSuperTypes="#//UniqueIdentifiableObject">
+  <eClassifiers xsi:type="ecore:EClass" name="DataTransmission">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value=" "/>
       <details key="documentation.en" value=" "/>
       <details key="name.de" value="DatenWeitergabe"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataClasses" lowerBound="1"
-        upperBound="-1" eType="#//DataClass">
+        upperBound="-1" eType="#//DataClass" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -197,7 +197,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataFields" lowerBound="1"
-        upperBound="-1" eType="#//DataField">
+        upperBound="-1" eType="#//DataField" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -205,7 +205,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contactRecipient" lowerBound="1"
-        eType="#//ContactInformation">
+        eType="#//ContactInformation" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -234,14 +234,14 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DataErasure" eSuperTypes="#//UniqueIdentifiableObject">
+  <eClassifiers xsi:type="ecore:EClass" name="DataErasure">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value=" "/>
       <details key="documentation.en" value=" "/>
       <details key="name.de" value="DatenLöschung"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataClasses" lowerBound="1"
-        upperBound="-1" eType="#//DataClass">
+        upperBound="-1" eType="#//DataClass" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -249,7 +249,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataFields" lowerBound="1"
-        upperBound="-1" eType="#//DataField">
+        upperBound="-1" eType="#//DataField" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -321,6 +321,7 @@
       <details key="documentation.en" value=" "/>
       <details key="name.de" value="DatenSatz"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="modelClass" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EClass"
         containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -336,8 +337,8 @@
         <details key="name.de" value="datenSchutzLevel"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fields" eType="#//DataField"
-        containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fields" upperBound="-1"
+        eType="#//DataField" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -351,6 +352,7 @@
       <details key="documentation.en" value=" "/>
       <details key="name.de" value="DatenFeld"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="attribute" eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EStructuralFeature">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
