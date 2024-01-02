@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdpr:DataProcessingRecord
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:gdpr="http://model.data.jena.de/meta/gdpr"
+    UUID="1"
+    name="Hundesteuer">
+  <dataProcessings
+      UUID="1963"
+      name="Hundesteuer"
+      description="Erfassung der Steuerpflichtigen (Halter) einschl. des Steuergegenstandes (Hunde) sowie jährliche Erhebung der Hundesteuer"
+      dataProcessingPurpose="Erfassung der Steuerpflichtigen (Halter) einschl. des Steuergegenstandes (Hunde) sowie jährliche Erhebung der Hundesteuer"
+      legalBasis="Satzung über die Erhebung der Hundesteuer in der Stadt Jena (Ortsrecht B 2) in der jeweils gültigen Fassung"
+      validFrom="2011-01-01T00:00:00.000+0100">
+    <dataClasses
+        name="HundeHalter"
+        privacyLevel="DEFAULT">
+      <fields
+          name="lastName"
+          type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+      <fields
+          name="firstName"
+          type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+      <fields
+          name="birthDate"
+          type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+      <fields
+          name="Address"
+          type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+    </dataClasses>
+    <dataClasses
+        name="Hund">
+      <fields
+          name="name"/>
+      <fields
+          name="birthDate"/>
+      <fields
+          name="breed"/>
+      <fields
+          name="dogTagID"/>
+      <fields
+          name="isGuideDog"
+          type="HEALTH_DATA"/>
+    </dataClasses>
+    <personalReferenceTypes>DIRECT</personalReferenceTypes>
+    <personalReferenceTypes>INDIRECT</personalReferenceTypes>
+    <dataProcessingTypes>COLLECTION</dataProcessingTypes>
+    <dataProcessingTypes>RECORDING</dataProcessingTypes>
+    <dataProcessingTypes>ORGANISATION</dataProcessingTypes>
+    <dataProcessingTypes>STRUCTURING</dataProcessingTypes>
+    <dataProcessingTypes>STORAGE</dataProcessingTypes>
+    <dataProcessingTypes>ALTERATION</dataProcessingTypes>
+    <dataProcessingTypes>RETRIEVAL</dataProcessingTypes>
+    <dataProcessingTypes>USE</dataProcessingTypes>
+    <dataProcessingTypes>ERASURE</dataProcessingTypes>
+    <dataProcessingTypes>RESTRICTION</dataProcessingTypes>
+    <dataProcessingTypes>DESTRUCTION</dataProcessingTypes>
+    <dataProcessingLawfulness
+        dataProcessingLawfulnessAnnotation="Umsetzung der Satzung über die Erhebung der Hundesteuer in der Stadt Jena">
+      <dataProcessingLawfulnessTypes>PUBLIC_INTERESTS_OR_AUTHORITY</dataProcessingLawfulnessTypes>
+      <dataProcessingLawfulnessTypes>LEGAL_OBLIGATION</dataProcessingLawfulnessTypes>
+    </dataProcessingLawfulness>
+    <dataTransmissions
+        legalBasis="§ 9 Abs. 3 Satzung über die Erhebung der Hundesteuer in der Stadt Jena">
+      <dataFields
+          name="HundeHalter/address"
+          type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+      <dataFields
+          name="Hund/dogTagID"/>
+      <contactRecipient
+          UUID="156438"
+          name="Hundeerhebung GmbH"/>
+    </dataTransmissions>
+    <dataErasures
+        deletionTermValue="10.0"
+        deletionTermUnit="Jahre"
+        deletionTermBasis="Tod des Hundes"
+        legalBasis="???">
+      <dataClasses
+          name="HundeHalter"/>
+      <dataClasses
+          name="Hund"
+          privacyLevel="DEFAULT"/>
+    </dataErasures>
+  </dataProcessings>
+  <contactControllerGlobal
+      UUID="001"
+      name="Dr. Thomas Nitzsche"/>
+  <contactControllerInternal
+      UUID="374"
+      name="Katharina Dengler"/>
+  <contactPrivacyOfficer
+      UUID="123"
+      name="Melanie Pesch"/>
+  <contactCommissionedProcessor
+      UUID="5464"
+      name="Hunde.cloud GmbH"
+      isThirdParty="true"
+      isThirdCountry="true"/>
+</gdpr:DataProcessingRecord>
