@@ -40,7 +40,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contactControllerGlobal"
-        lowerBound="1" eType="#//ContactInformation" containment="true">
+        lowerBound="1" eType="#//ContactInformation">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -48,7 +48,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contactControllerInternal"
-        lowerBound="1" eType="#//ContactInformation" containment="true">
+        lowerBound="1" eType="#//ContactInformation">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -56,7 +56,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contactJointResponsibilities"
-        upperBound="-1" eType="#//ContactInformation" containment="true">
+        upperBound="-1" eType="#//ContactInformation">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -64,7 +64,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contactPrivacyOfficer"
-        lowerBound="1" eType="#//ContactInformation" containment="true">
+        lowerBound="1" eType="#//ContactInformation">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -72,7 +72,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contactCommissionedProcessor"
-        eType="#//ContactInformation" containment="true">
+        eType="#//ContactInformation">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -188,16 +188,16 @@
       <details key="documentation.en" value=" "/>
       <details key="name.de" value="DatenWeitergabe"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataClasses" lowerBound="1"
-        upperBound="-1" eType="#//DataClass" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataClasses" upperBound="-1"
+        eType="#//DataClass" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
         <details key="name.de" value="datenSätze"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataFields" lowerBound="1"
-        upperBound="-1" eType="#//DataField" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataFields" upperBound="-1"
+        eType="#//DataField" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -205,7 +205,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="contactRecipient" lowerBound="1"
-        eType="#//ContactInformation" containment="true">
+        eType="#//ContactInformation">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -240,16 +240,16 @@
       <details key="documentation.en" value=" "/>
       <details key="name.de" value="DatenLöschung"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataClasses" lowerBound="1"
-        upperBound="-1" eType="#//DataClass" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataClasses" upperBound="-1"
+        eType="#//DataClass" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
         <details key="name.de" value="datenSätze"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dataFields" lowerBound="1"
-        upperBound="-1" eType="#//DataField" containment="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataFields" upperBound="-1"
+        eType="#//DataField" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -360,7 +360,7 @@
         <details key="name.de" value="attribut"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="#//PersonalDataCategory">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" lowerBound="1" eType="#//PersonalDataCategory">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -374,10 +374,11 @@
       <details key="documentation.en" value=" "/>
       <details key="name.de" value="DatenschutzLevel"/>
     </eAnnotations>
-    <eLiterals name="NONE"/>
+    <eLiterals name="UNKOWN" literal="UNKOWN"/>
     <eLiterals name="LOW" value="1"/>
     <eLiterals name="DEFAULT" value="2"/>
     <eLiterals name="HIGH" value="3"/>
+    <eLiterals name="NONE" value="4"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="PersonalDataCategory">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -385,7 +386,7 @@
       <details key="documentation.en" value=" "/>
       <details key="name.de" value="DatenschutzArt"/>
     </eAnnotations>
-    <eLiterals name="NO_PERSONAL_DATA"/>
+    <eLiterals name="UNKNOWN"/>
     <eLiterals name="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY" value="1"/>
     <eLiterals name="ETHNIC_ORIGIN" value="2"/>
     <eLiterals name="RELIGIOUS_PHILOSOPHICAL_BELIEFS" value="3"/>
@@ -394,6 +395,7 @@
     <eLiterals name="HEALTH_DATA" value="6"/>
     <eLiterals name="SEXUAL_LIFE_ORIENTATION" value="7"/>
     <eLiterals name="CRIMINAL_CONVICTIONS_OFFENSES" value="8"/>
+    <eLiterals name="NO_PERSONAL_DATA" value="9"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="DataProcessingType">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -401,92 +403,93 @@
       <details key="documentation.en" value=" "/>
       <details key="name.de" value="VerarbeitungsArt"/>
     </eAnnotations>
-    <eLiterals name="COLLECTION" literal="COLLECTION">
+    <eLiterals name="UNKNOWN"/>
+    <eLiterals name="COLLECTION" value="1" literal="COLLECTION">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Erheben"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="RECORDING" value="1">
+    <eLiterals name="RECORDING" value="2">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Erfassen"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="ORGANISATION" value="2">
+    <eLiterals name="ORGANISATION" value="3">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Organisation"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="STRUCTURING" value="3">
+    <eLiterals name="STRUCTURING" value="4">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Ordnen"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="STORAGE" value="4">
+    <eLiterals name="STORAGE" value="5">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Speicherung"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="ADAPTION" value="5">
+    <eLiterals name="ADAPTION" value="6">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Anpassung"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="ALTERATION" value="6">
+    <eLiterals name="ALTERATION" value="7">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Veränderung"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="RETRIEVAL" value="7">
+    <eLiterals name="RETRIEVAL" value="8">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Abfragen"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="CONSULTAION" value="8">
+    <eLiterals name="CONSULTAION" value="9">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Auslesen"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="USE" value="9">
+    <eLiterals name="USE" value="10">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Verwendung"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="TRANSMISSION" value="10">
+    <eLiterals name="TRANSMISSION" value="11">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Übermittlung"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="DISSEMINATION" value="11">
+    <eLiterals name="DISSEMINATION" value="12">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Bereitstellung"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="MAKING_AVAILABLE" value="12">
+    <eLiterals name="MAKING_AVAILABLE" value="13">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Verbreitung"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="ALIGNMENT" value="13">
+    <eLiterals name="ALIGNMENT" value="14">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Abgleich"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="COMBINATION" value="14">
+    <eLiterals name="COMBINATION" value="15">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Verknüpfung"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="RESTRICTION" value="15">
+    <eLiterals name="RESTRICTION" value="16">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Einschränkung"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="ERASURE" value="16">
+    <eLiterals name="ERASURE" value="17">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Löschung"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="DESTRUCTION" value="17">
+    <eLiterals name="DESTRUCTION" value="18">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="name.de" value="Vernichtung"/>
       </eAnnotations>
@@ -498,42 +501,43 @@
       <details key="documentation.en" value=" "/>
       <details key="name.de" value="ErfassungsBerechtigungsArt"/>
     </eAnnotations>
-    <eLiterals name="CONSENT">
+    <eLiterals name="UNKNOWN"/>
+    <eLiterals name="CONSENT" value="1">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
         <details key="name.de" value="Einwilligung"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="CONTRACTUAL_REQUIREMENT" value="1">
+    <eLiterals name="CONTRACTUAL_REQUIREMENT" value="2">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
         <details key="name.de" value="Vertragliche_Verpflichtung"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="LEGAL_OBLIGATION" value="2">
+    <eLiterals name="LEGAL_OBLIGATION" value="3">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
         <details key="name.de" value="Rechtliche_Verpflichtung"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="VITAL_INTERESTS" value="3">
+    <eLiterals name="VITAL_INTERESTS" value="4">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
         <details key="name.de" value="Lebenswichtige_Interessen"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="PUBLIC_INTERESTS_OR_AUTHORITY" value="4">
+    <eLiterals name="PUBLIC_INTERESTS_OR_AUTHORITY" value="5">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
         <details key="name.de" value="Öffentliches_Interesse_oder_Gewalt"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="LEGITIMATE_INTERESTS_AFTER_WEIGHING" value="5">
+    <eLiterals name="LEGITIMATE_INTERESTS_AFTER_WEIGHING" value="6">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -547,19 +551,26 @@
       <details key="documentation.en" value=" "/>
       <details key="name.de" value="PersonenBezugArt"/>
     </eAnnotations>
-    <eLiterals name="DIRECT">
+    <eLiterals name="UNKNOWN"/>
+    <eLiterals name="DIRECT" value="1">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
         <details key="name.de" value="Direkt"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="INDIRECT" value="1">
+    <eLiterals name="INDIRECT" value="2">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
         <details key="name.de" value="Indirekt"/>
       </eAnnotations>
     </eLiterals>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Root">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataProcessingRecords"
+        upperBound="-1" eType="#//DataProcessingRecord" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="contactInformation" upperBound="-1"
+        eType="#//ContactInformation" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

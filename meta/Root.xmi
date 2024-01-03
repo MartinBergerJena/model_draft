@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gdpr:Root xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:gdpr="http://model.data.jena.de/meta/gdpr">
+  <dataProcessingRecords
+      UUID="5"
+      name="Hundesteuer"
+      contactControllerGlobal="001"
+      contactControllerInternal="374"
+      contactJointResponsibilities="123 374"
+      contactPrivacyOfficer="123"
+      contactCommissionedProcessor="5464">
+    <dataProcessings
+        UUID="1963"
+        name="Hundesteuer"
+        description="Erfassung der Steuerpflichtigen (Halter) einschl. des Steuergegenstandes (Hunde) sowie jährliche Erhebung der Hundesteuer"
+        dataProcessingPurpose="Erfassung der Steuerpflichtigen (Halter) einschl. des Steuergegenstandes (Hunde) sowie jährliche Erhebung der Hundesteuer"
+        legalBasis="Satzung über die Erhebung der Hundesteuer in der Stadt Jena (Ortsrecht B 2) in der jeweils gültigen Fassung"
+        validFrom="2011-01-01T00:00:00.000+0100">
+      <dataClasses
+          name="HundeHalter"
+          privacyLevel="DEFAULT">
+        <fields
+            name="lastName"
+            type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+        <fields
+            name="firstName"
+            type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+        <fields
+            name="birthDate"
+            type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+        <fields
+            name="address"
+            type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+      </dataClasses>
+      <dataClasses
+          name="Hund"
+          privacyLevel="LOW">
+        <fields
+            name="name"
+            type="NO_PERSONAL_DATA"/>
+        <fields
+            name="birthDate"
+            type="NO_PERSONAL_DATA"/>
+        <fields
+            name="breed"
+            type="NO_PERSONAL_DATA"/>
+        <fields
+            name="isGuideDog"
+            type="HEALTH_DATA"/>
+      </dataClasses>
+      <personalReferenceTypes>DIRECT</personalReferenceTypes>
+      <personalReferenceTypes>INDIRECT</personalReferenceTypes>
+      <dataProcessingTypes>COLLECTION</dataProcessingTypes>
+      <dataProcessingTypes>RECORDING</dataProcessingTypes>
+      <dataProcessingTypes>ORGANISATION</dataProcessingTypes>
+      <dataProcessingTypes>STRUCTURING</dataProcessingTypes>
+      <dataProcessingTypes>STORAGE</dataProcessingTypes>
+      <dataProcessingTypes>ALTERATION</dataProcessingTypes>
+      <dataProcessingTypes>RETRIEVAL</dataProcessingTypes>
+      <dataProcessingTypes>USE</dataProcessingTypes>
+      <dataProcessingTypes>RESTRICTION</dataProcessingTypes>
+      <dataProcessingTypes>ERASURE</dataProcessingTypes>
+      <dataProcessingTypes>DESTRUCTION</dataProcessingTypes>
+      <dataProcessingLawfulness
+          dataProcessingLawfulnessAnnotation="Umsetzung der Satzung über die Erhebung der Hundesteuer in der Stadt Jena">
+        <dataProcessingLawfulnessTypes>LEGAL_OBLIGATION</dataProcessingLawfulnessTypes>
+        <dataProcessingLawfulnessTypes>PUBLIC_INTERESTS_OR_AUTHORITY</dataProcessingLawfulnessTypes>
+      </dataProcessingLawfulness>
+      <dataTransmissions
+          contactRecipient="16438"
+          legalBasis="§ 9 Abs. 3 Satzung über die Erhebung der Hundesteuer in der Stadt Jena">
+        <dataFields
+            name="HundeHalter/address"
+            type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+        <dataFields
+            name="Hund/dogTagID"
+            type="NO_PERSONAL_DATA"/>
+      </dataTransmissions>
+      <dataErasures
+          deletionTermValue="10.0"
+          deletionTermUnit="Jahre"
+          deletionTermBasis="Tod des Hundes"
+          legalBasis="irgedeine Vorschrift">
+        <dataClasses
+            name="HundeHalter"
+            privacyLevel="DEFAULT"/>
+        <dataClasses
+            name="Hund"
+            privacyLevel="LOW"/>
+      </dataErasures>
+    </dataProcessings>
+  </dataProcessingRecords>
+  <dataProcessingRecords
+      UUID="2"
+      name="Lorem"
+      contactControllerGlobal="34842788436867154164"
+      contactControllerInternal="4876978987465"
+      contactJointResponsibilities="213881 4876978987465"
+      contactPrivacyOfficer="84531383184365846"
+      contactCommissionedProcessor="213881">
+    <dataProcessings
+        UUID="16846298416"
+        name="Lorem ipsum"
+        description="Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus."
+        dataProcessingPurpose="Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
+        legalBasis="Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat"
+        validFrom="1990-10-03T00:00:00.000+0100"
+        validTo="2023-12-31T00:00:00.000+0100">
+      <dataClasses
+          name="SedDiamNonumyEirmod"
+          privacyLevel="HIGH">
+        <fields
+            name="temporInviduntUtLaboreEtDolore"
+            type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+        <fields
+            name="conseteturSadipscingElitr"
+            type="HEALTH_DATA"/>
+        <fields
+            name="sedDiamVoluptua"
+            type="NO_PERSONAL_DATA"/>
+      </dataClasses>
+      <dataClasses
+          name="LoremIpsumDolorSitAmetConseteturSadipscing"
+          privacyLevel="DEFAULT">
+        <fields
+            name="eosEtAccusam"
+            type="NO_PERSONAL_DATA"/>
+        <fields
+            name="justoDuoDolores"
+            type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+      </dataClasses>
+      <personalReferenceTypes>DIRECT</personalReferenceTypes>
+      <personalReferenceTypes>INDIRECT</personalReferenceTypes>
+      <dataProcessingTypes>COLLECTION</dataProcessingTypes>
+      <dataProcessingTypes>RECORDING</dataProcessingTypes>
+      <dataProcessingTypes>ORGANISATION</dataProcessingTypes>
+      <dataProcessingTypes>STRUCTURING</dataProcessingTypes>
+      <dataProcessingTypes>STORAGE</dataProcessingTypes>
+      <dataProcessingTypes>ADAPTION</dataProcessingTypes>
+      <dataProcessingTypes>ALTERATION</dataProcessingTypes>
+      <dataProcessingTypes>RETRIEVAL</dataProcessingTypes>
+      <dataProcessingTypes>CONSULTAION</dataProcessingTypes>
+      <dataProcessingTypes>USE</dataProcessingTypes>
+      <dataProcessingTypes>TRANSMISSION</dataProcessingTypes>
+      <dataProcessingTypes>DISSEMINATION</dataProcessingTypes>
+      <dataProcessingTypes>MAKING_AVAILABLE</dataProcessingTypes>
+      <dataProcessingTypes>ALIGNMENT</dataProcessingTypes>
+      <dataProcessingTypes>COMBINATION</dataProcessingTypes>
+      <dataProcessingTypes>RESTRICTION</dataProcessingTypes>
+      <dataProcessingTypes>ERASURE</dataProcessingTypes>
+      <dataProcessingTypes>DESTRUCTION</dataProcessingTypes>
+      <bpmnProcess>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</bpmnProcess>
+      <dataProcessingLawfulness
+          dataProcessingLawfulnessAnnotation="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.">
+        <dataProcessingLawfulnessTypes>CONSENT</dataProcessingLawfulnessTypes>
+      </dataProcessingLawfulness>
+      <dataTransmissions
+          contactRecipient="34842788436867154164"
+          legalBasis="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+          guarantee="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet"
+          adequacyDecision="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.">
+        <dataClasses
+            name="LoremIpsumDolorSitAmetConseteturSadipscing"
+            privacyLevel="DEFAULT"/>
+        <dataFields
+            name="SedDiamNonumyEirmod/temporInviduntUtLaboreEtDolore"
+            type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+        <dataFields
+            name="SedDiamNonumyEirmod/conseteturSadipscingElitr"
+            type="HEALTH_DATA"/>
+      </dataTransmissions>
+      <dataTransmissions
+          contactRecipient="3215402536">
+        <dataClasses
+            name="SedDiamNonumyEirmod"
+            privacyLevel="HIGH"/>
+      </dataTransmissions>
+      <dataErasures
+          deletionTermValue="10.0"
+          deletionTermUnit="Lorem ipsum dolor"
+          deletionTermBasis="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+          legalBasis="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.">
+        <dataClasses
+            name="LoremIpsumDolorSitAmetConseteturSadipscing"
+            privacyLevel="DEFAULT"/>
+      </dataErasures>
+      <dataErasures
+          deletionTermValue="5.0"
+          deletionTermUnit="sed diam nonumy"
+          deletionTermBasis="tempor invidunt ut labore et dolore magna aliquyam"
+          legalBasis="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.">
+        <dataFields
+            name="SedDiamNonumyEirmod/temporInviduntUtLaboreEtDolore"
+            type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+        <dataFields
+            name="SedDiamNonumyEirmod/conseteturSadipscingElitr"
+            type="HEALTH_DATA"/>
+      </dataErasures>
+      <dataErasures
+          deletionTermValue="12.0"
+          deletionTermUnit="diam nonumy eirmod tempor"
+          deletionTermBasis="Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+          legalBasis="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren">
+        <dataFields
+            name="SedDiamNonumyEirmod/justoDuoDolores"
+            type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+      </dataErasures>
+    </dataProcessings>
+    <dataProcessings
+        UUID="16846298416"
+        name="Dolor"
+        description="Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus."
+        dataProcessingPurpose="Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."
+        legalBasis="Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat"
+        validFrom="1990-10-03T00:00:00.000+0100"
+        validTo="2030-12-31T00:00:00.000+0100">
+      <dataClasses
+          name="SedDiamNonumyEirmod"
+          privacyLevel="HIGH">
+        <fields
+            name="temporInviduntUtLaboreEtDolore"
+            type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+        <fields
+            name="conseteturSadipscingElitr"
+            type="HEALTH_DATA"/>
+        <fields
+            name="sedDiamVoluptua"
+            type="NO_PERSONAL_DATA"/>
+      </dataClasses>
+      <dataClasses
+          name="LoremIpsumDolorSitAmetConseteturSadipscing"
+          privacyLevel="LOW">
+        <fields
+            name="eosEtAccusam"
+            type="NO_PERSONAL_DATA"/>
+        <fields
+            name="justoDuoDolores"
+            type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+      </dataClasses>
+      <personalReferenceTypes>DIRECT</personalReferenceTypes>
+      <personalReferenceTypes>INDIRECT</personalReferenceTypes>
+      <dataProcessingTypes>COLLECTION</dataProcessingTypes>
+      <dataProcessingTypes>RECORDING</dataProcessingTypes>
+      <dataProcessingTypes>ORGANISATION</dataProcessingTypes>
+      <dataProcessingTypes>STRUCTURING</dataProcessingTypes>
+      <dataProcessingTypes>STORAGE</dataProcessingTypes>
+      <dataProcessingTypes>ADAPTION</dataProcessingTypes>
+      <dataProcessingTypes>ALTERATION</dataProcessingTypes>
+      <dataProcessingTypes>RETRIEVAL</dataProcessingTypes>
+      <dataProcessingTypes>CONSULTAION</dataProcessingTypes>
+      <dataProcessingTypes>USE</dataProcessingTypes>
+      <dataProcessingTypes>TRANSMISSION</dataProcessingTypes>
+      <dataProcessingTypes>DISSEMINATION</dataProcessingTypes>
+      <dataProcessingTypes>MAKING_AVAILABLE</dataProcessingTypes>
+      <dataProcessingTypes>ALIGNMENT</dataProcessingTypes>
+      <dataProcessingTypes>COMBINATION</dataProcessingTypes>
+      <dataProcessingTypes>RESTRICTION</dataProcessingTypes>
+      <dataProcessingTypes>ERASURE</dataProcessingTypes>
+      <dataProcessingTypes>DESTRUCTION</dataProcessingTypes>
+      <bpmnProcess>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</bpmnProcess>
+      <dataProcessingLawfulness
+          dataProcessingLawfulnessAnnotation="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.">
+        <dataProcessingLawfulnessTypes>LEGAL_OBLIGATION</dataProcessingLawfulnessTypes>
+        <dataProcessingLawfulnessTypes>PUBLIC_INTERESTS_OR_AUTHORITY</dataProcessingLawfulnessTypes>
+      </dataProcessingLawfulness>
+      <dataErasures
+          deletionTermValue="10.0"
+          deletionTermUnit="Lorem ipsum dolor"
+          deletionTermBasis="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam"
+          legalBasis="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.">
+        <dataClasses
+            name="LoremIpsumDolorSitAmetConseteturSadipscing"
+            privacyLevel="DEFAULT"/>
+        <dataClasses
+            name="SedDiamNonumyEirmod"
+            privacyLevel="HIGH"/>
+      </dataErasures>
+    </dataProcessings>
+  </dataProcessingRecords>
+  <contactInformation
+      UUID="123"
+      name="Melanie Pesch"/>
+  <contactInformation
+      UUID="374"
+      name="Katharina Dengler"/>
+  <contactInformation
+      UUID="001"
+      name="Dr. Thomas Nitzsche"/>
+  <contactInformation
+      UUID="5464"
+      name="Hunde.cloud GmbH"
+      isThirdParty="true"
+      isThirdCountry="true"/>
+  <contactInformation
+      UUID="16438"
+      name="Hundeerhebung GmbH"/>
+  <contactInformation
+      UUID="213881"
+      name="Quis nostrud, exerci tation, ullamcorper suscipit&quot;"
+      isThirdParty="true"
+      isThirdCountry="true"/>
+  <contactInformation
+      UUID="84531383184365846"
+      name="Stet clita, kasd gubergren, no sea takimata"/>
+  <contactInformation
+      UUID="84136"
+      name="Odio dignissim, qui blandit, praesent luptatum"/>
+  <contactInformation
+      UUID="1348432198158"
+      name="Tempor invidunt, ut labore, et dolore"
+      isThirdParty="true"
+      isThirdCountry="true"/>
+  <contactInformation
+      UUID="4876978987465"
+      name="At vero eos, et accusam, justo dolores"/>
+  <contactInformation
+      UUID="34842788436867154164"
+      name="Lorem ipsum, dolor sit, amet consetetur"/>
+  <contactInformation
+      UUID="3215402536"
+      name="No sea, takimata sanctus, est Lorem"/>
+</gdpr:Root>
