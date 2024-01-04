@@ -337,7 +337,7 @@
         <details key="name.de" value="datenSchutzLevel"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fields" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dataFields" upperBound="-1"
         eType="#//DataField" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
