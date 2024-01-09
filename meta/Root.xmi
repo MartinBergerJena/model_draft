@@ -7,7 +7,6 @@
       name="Hundesteuer"
       contactControllerGlobal="001"
       contactControllerInternal="374"
-      contactJointResponsibilities="123 374"
       contactPrivacyOfficer="123"
       contactCommissionedProcessor="5464">
     <dataProcessings
@@ -63,10 +62,8 @@
       <dataProcessingTypes>ERASURE</dataProcessingTypes>
       <dataProcessingTypes>DESTRUCTION</dataProcessingTypes>
       <dataProcessingLawfulness
-          dataProcessingLawfulnessAnnotation="Umsetzung der Satzung über die Erhebung der Hundesteuer in der Stadt Jena">
-        <dataProcessingLawfulnessTypes>LEGAL_OBLIGATION</dataProcessingLawfulnessTypes>
-        <dataProcessingLawfulnessTypes>PUBLIC_INTERESTS_OR_AUTHORITY</dataProcessingLawfulnessTypes>
-      </dataProcessingLawfulness>
+          dataProcessingLawfulnessTypes="PUBLIC_INTERESTS_OR_AUTHORITY"
+          dataProcessingLawfulnessAnnotation="Umsetzung der Satzung über die Erhebung der Hundesteuer in der Stadt Jena"/>
       <dataTransmissions
           contactRecipient="16438"
           legalBasis="§ 9 Abs. 3 Satzung über die Erhebung der Hundesteuer in der Stadt Jena">
@@ -76,6 +73,44 @@
         <dataFields
             name="Hund/dogTagID"
             type="NO_PERSONAL_DATA"/>
+      </dataTransmissions>
+      <dataTransmissions
+          contactRecipient="5464"
+          legalBasis="Auftragsverarbeitung auf Grundlage Wartungsvertrag..."
+          guarantee="irgendeine Garantie"
+          adequacyDecision="irgendeine Entscheidung">
+        <dataClasses
+            name="HundeHalter"
+            privacyLevel="DEFAULT">
+          <dataFields
+              name="lastName"
+              type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+          <dataFields
+              name="firstName"
+              type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+          <dataFields
+              name="birthDate"
+              type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+          <dataFields
+              name="address"
+              type="PERSONAL_DATA_WITHOUT_SPECIAL_CATEGORY"/>
+        </dataClasses>
+        <dataClasses
+            name="Hund"
+            privacyLevel="LOW">
+          <dataFields
+              name="name"
+              type="NO_PERSONAL_DATA"/>
+          <dataFields
+              name="birthDate"
+              type="NO_PERSONAL_DATA"/>
+          <dataFields
+              name="breed"
+              type="NO_PERSONAL_DATA"/>
+          <dataFields
+              name="isGuideDog"
+              type="HEALTH_DATA"/>
+        </dataClasses>
       </dataTransmissions>
       <dataErasures
           deletionTermValue="10.0"
@@ -90,13 +125,16 @@
             privacyLevel="LOW"/>
       </dataErasures>
     </dataProcessings>
+    <contactJointResponsibilities
+        contactInformation="374"/>
+    <contactJointResponsibilities
+        contactInformation="16438"/>
   </dataProcessingRecords>
   <dataProcessingRecords
       UUID="2"
       name="Lorem"
       contactControllerGlobal="34842788436867154164"
       contactControllerInternal="4876978987465"
-      contactJointResponsibilities="213881 4876978987465"
       contactPrivacyOfficer="84531383184365846"
       contactCommissionedProcessor="213881">
     <dataProcessings
@@ -152,9 +190,8 @@
       <dataProcessingTypes>DESTRUCTION</dataProcessingTypes>
       <bpmnProcess>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</bpmnProcess>
       <dataProcessingLawfulness
-          dataProcessingLawfulnessAnnotation="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.">
-        <dataProcessingLawfulnessTypes>CONSENT</dataProcessingLawfulnessTypes>
-      </dataProcessingLawfulness>
+          dataProcessingLawfulnessTypes="CONSENT"
+          dataProcessingLawfulnessAnnotation="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."/>
       <dataTransmissions
           contactRecipient="34842788436867154164"
           legalBasis="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
@@ -260,10 +297,8 @@
       <dataProcessingTypes>DESTRUCTION</dataProcessingTypes>
       <bpmnProcess>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat</bpmnProcess>
       <dataProcessingLawfulness
-          dataProcessingLawfulnessAnnotation="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.">
-        <dataProcessingLawfulnessTypes>LEGAL_OBLIGATION</dataProcessingLawfulnessTypes>
-        <dataProcessingLawfulnessTypes>PUBLIC_INTERESTS_OR_AUTHORITY</dataProcessingLawfulnessTypes>
-      </dataProcessingLawfulness>
+          dataProcessingLawfulnessTypes="PUBLIC_INTERESTS_OR_AUTHORITY"
+          dataProcessingLawfulnessAnnotation="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi."/>
       <dataErasures
           deletionTermValue="10.0"
           deletionTermUnit="Lorem ipsum dolor"
@@ -277,6 +312,12 @@
             privacyLevel="HIGH"/>
       </dataErasures>
     </dataProcessings>
+    <contactJointResponsibilities
+        contactInformation="84136"/>
+    <contactJointResponsibilities
+        contactInformation="4876978987465"/>
+    <contactJointResponsibilities
+        contactInformation="1348432198158"/>
   </dataProcessingRecords>
   <contactInformation
       UUID="123"
