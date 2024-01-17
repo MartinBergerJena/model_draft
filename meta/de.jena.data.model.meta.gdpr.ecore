@@ -643,7 +643,7 @@
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="responsibilities" lowerBound="1"
-        upperBound="-1" eType="#//ResposibilityDPIA" containment="true">
+        upperBound="-1" eType="#//ResponsibilityDPIA" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=" "/>
         <details key="documentation.en" value=" "/>
@@ -667,7 +667,7 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResposibilityDPIA">
+  <eClassifiers xsi:type="ecore:EClass" name="ResponsibilityDPIA">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value=" "/>
       <details key="documentation.en" value=" "/>
@@ -877,32 +877,32 @@
         <details key="name.de" value="UNBEARBEITET"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="LOW" value="1">
+    <eLiterals name="NONE" value="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+        <details key="documentation.en" value=" "/>
+        <details key="name.de" value="KEINE"/>
+      </eAnnotations>
+    </eLiterals>
+    <eLiterals name="LOW" value="2">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=""/>
         <details key="documentation.en" value=" "/>
         <details key="name.de" value="GERING"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="MEDIUM" value="2">
+    <eLiterals name="MEDIUM" value="3">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=""/>
         <details key="documentation.en" value=" "/>
         <details key="name.de" value="MITTEL"/>
       </eAnnotations>
     </eLiterals>
-    <eLiterals name="HIGH" value="3">
+    <eLiterals name="HIGH" value="4">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation" value=""/>
         <details key="documentation.en" value=" "/>
         <details key="name.de" value="HOCH"/>
-      </eAnnotations>
-    </eLiterals>
-    <eLiterals name="NONE" value="4">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value=""/>
-        <details key="documentation.en" value=" "/>
-        <details key="name.de" value="KEINE"/>
       </eAnnotations>
     </eLiterals>
   </eClassifiers>
