@@ -68,8 +68,7 @@
         <details key="documentation" value="Flur, zu der das Flurstück gehört"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="cadastrialBoundary" lowerBound="1"
-        eType="#//CadastrialBoundary">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cadastrialBoundary" eType="#//CadastrialBoundary">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="cadastral boundary the lot belongs to"/>
         <details key="documentation" value="Gemarkung, zu der das Flurstück gehört"/>
