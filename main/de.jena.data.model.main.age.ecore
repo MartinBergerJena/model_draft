@@ -27,14 +27,19 @@
       <details key="documentation" value="Basisklasse mit allgemeingültigen Attributen für konkrete Altersgruppenstrukturen"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ageInterval" lowerBound="1"
-        eType="ecore:EClass http://model.data.jena.de/main/common#//IntegerInterval">
+        eType="ecore:EClass http://model.data.jena.de/main/common#//SpecifiedIntegerInterval">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="age interval in years which forms the limits of the age group"/>
         <details key="documentation" value="das Altersintervall in Jahren, das die Grenzen für die Altersgruppe bildet"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ages" lowerBound="1" upperBound="-1"
-        eType="#//Age"/>
+        eType="#//Age">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="Reference to ages which are included in an age group"/>
+        <details key="documentation" value="Referenz auf die Alter, die in der Altersgruppe enthalten sind"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AgeGroupSingleYears" eSuperTypes="#//AgeGroup">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -102,8 +107,20 @@
       <details key="documentation.en" value="Basic class for all generation structures"/>
       <details key="documentation" value="Basisklasse für alle Generationenstrukturen"/>
     </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="birthDateInterval" lowerBound="1"
+        eType="ecore:EClass http://model.data.jena.de/main/common#//SpecifiedDateInterval">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="Interval of birth dates which forms the limits of the generation"/>
+        <details key="documentation" value="Intervall der Geburtsdaten, das die Grenzen für die Generationen bildet"/>
+      </eAnnotations>
+    </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="birthDates" lowerBound="1"
-        upperBound="-1" eType="#//BirthDate"/>
+        upperBound="-1" eType="#//BirthDate">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="Reference to birth dates which are included in a generation"/>
+        <details key="documentation" value="Referenz zu Geburtsdaten, die in der jeweiligen Generation enthalten sind"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GenerationStandard" eSuperTypes="#//Generation">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
