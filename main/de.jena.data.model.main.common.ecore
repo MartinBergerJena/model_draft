@@ -20,6 +20,7 @@
       <details key="documentation" value="GeoJSON  gemäß https://www.ietf.org/rfc/rfc7946.txt"/>
     </eAnnotations>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EDataType" name="EInstant" instanceClassName="java.time.Instant"/>
   <eClassifiers xsi:type="ecore:EClass" name="UniqueIdentifiableObject" abstract="true">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="basic class for all objects identifiable by UUID"/>
@@ -132,39 +133,6 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ValidityDurationObject" abstract="true">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation.en" value="basic class containing the duration in which an object is valid"/>
-      <details key="documentation" value="Basisklasse für den Zeitraum, in dem ein Objekt gültig ist."/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="validityDuration" lowerBound="1"
-        eType="#//SpecifiedDateInterval" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation.en" value="specified date interval in which an object is valid"/>
-        <details key="documentation" value="spezifiziertes Datumsintervall, in dem ein Objekt gültig ist"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IntervalLimitSpecifier" abstract="true">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation.en" value="base class providing attributes that define the limit types (value included/excluded) in intervals"/>
-      <details key="documentation" value="Basisklasse mit Attributen, die die Art der Grenzwerte von Intervallen (Ein- oder Ausschließen des jeweiligen Wertes) definieren"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowerIntervalLimitType"
-        lowerBound="1" eType="#//IntervalLimitType">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation.en" value="limit type (included/excluded) for the lower limit of an interval"/>
-        <details key="documentation" value="Art der Untergrenze (Wert ein- oder ausschließen) eines Intervalls"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="upperIntervalLimitType"
-        lowerBound="1" eType="#//IntervalLimitType">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation.en" value="limit type (included/excluded) for the upper limit of an interval"/>
-        <details key="documentation" value="Art der Obergrenze (Wert ein- oder ausschließen) eines Intervalls"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DateInterval">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="Basic class for date intervals"/>
@@ -201,6 +169,26 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntervalLimitSpecifier" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="base class providing attributes that define the limit types (value included/excluded) in intervals"/>
+      <details key="documentation" value="Basisklasse mit Attributen, die die Art der Grenzwerte von Intervallen (Ein- oder Ausschließen des jeweiligen Wertes) definieren"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lowerIntervalLimitType"
+        lowerBound="1" eType="#//IntervalLimitType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="limit type (included/excluded) for the lower limit of an interval"/>
+        <details key="documentation" value="Art der Untergrenze (Wert ein- oder ausschließen) eines Intervalls"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="upperIntervalLimitType"
+        lowerBound="1" eType="#//IntervalLimitType">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="limit type (included/excluded) for the upper limit of an interval"/>
+        <details key="documentation" value="Art der Obergrenze (Wert ein- oder ausschließen) eines Intervalls"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SpecifiedDateInterval" eSuperTypes="#//DateInterval #//IntervalLimitSpecifier">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="Basic class for date intervals"/>
@@ -212,6 +200,19 @@
       <details key="documentation.en" value="Basic class for integer intervals"/>
       <details key="documentation" value="Basisklasse für ganzzahlige Intervalle"/>
     </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="ValidityDurationObject" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="basic class containing the duration in which an object is valid"/>
+      <details key="documentation" value="Basisklasse für den Zeitraum, in dem ein Objekt gültig ist."/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="validityDuration" lowerBound="1"
+        eType="#//SpecifiedDateInterval" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="specified date interval in which an object is valid"/>
+        <details key="documentation" value="spezifiziertes Datumsintervall, in dem ein Objekt gültig ist"/>
+      </eAnnotations>
+    </eStructuralFeatures>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="ResponsibilityType">
     <eLiterals name="Owner" literal="OWNERSHIP"/>
@@ -255,5 +256,4 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EDataType" name="EInstant" instanceClassName="java.time.Instant"/>
 </ecore:EPackage>
