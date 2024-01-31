@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simple:ClassOne
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:simple="http://simple.simple/simple"
+    attributeOne="1"
+    id="1" attributeTwo="2"
+    attributeThree="3"/>

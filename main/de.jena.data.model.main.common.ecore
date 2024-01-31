@@ -223,19 +223,6 @@
     <eLiterals name="Inclusive" literal="INCLUSIVE"/>
     <eLiterals name="Exclusive" literal="EXCLUSIVE"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="SemanticIdentifiableObject" abstract="true">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation" value="Basisklasse für Objekte, die Referenzen zu Objekten in semantischen Modellen aufweisen"/>
-      <details key="documentation.en" value="basisc class of objects having references to objects in semantic models"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="semanticIdentifiers" upperBound="-1"
-        eType="#//SemanticIdentifier" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation" value="semantische Referenz eines Objekts"/>
-        <details key="documentation.en" value="semantic reference of an object"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="SemanticIdentifier">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Basisklasse mit Attributen für Verweise auf entsprechende Objekte in semantischen Modelle"/>
@@ -253,6 +240,19 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentaion" value="ID des Objekts im semantischen modell (veränderlicher Teil der URI)"/>
         <details key="documentation.en" value="ID of the object according to the semantic model (variable part of the URI)"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="SemanticIdentifiableObject" abstract="true">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Basisklasse für Objekte, die Referenzen zu Objekten in semantischen Modellen aufweisen"/>
+      <details key="documentation.en" value="basisc class of objects having references to objects in semantic models"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semanticIdentifiers" upperBound="-1"
+        eType="#//SemanticIdentifier" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value="semantische Referenz eines Objekts"/>
+        <details key="documentation.en" value="semantic reference of an object"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
