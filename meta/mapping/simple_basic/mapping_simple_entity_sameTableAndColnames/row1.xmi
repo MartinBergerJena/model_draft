@@ -3,6 +3,4 @@
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:simple="http://simple.simple/simple"
-    attributeOne="1"
-    id="1" attributeTwo="2"
-    attributeThree="3"/>
+    attributeOne="bla"/>
