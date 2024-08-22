@@ -10,9 +10,12 @@
       <basic>
         <column
             name="differentColumn"/>
+        <name
+            xsi:type="ecore:EAttribute"
+            href="http://simple.simple/simple103#//ClassOne/attributeOne"/>
       </basic>
     </attributes>
     <class xsi:type="ecore:EClass"
-        href="simple103.ecore#//ClassOne"/>
+        href="http://simple.simple/simple103#//ClassOne"/>
   </entity>
 </emfmapping:EntityMappingsType>
