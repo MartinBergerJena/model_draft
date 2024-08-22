@@ -6,8 +6,8 @@
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
     xmlns:emfmapping="https://gecko.org/persistence/jpa/emfmapping">
   <entity>
-    <table name="otherTable"/>
+    <table name="differentlyNamedTable"/>
     <class xsi:type="ecore:EClass"
-        href="http://simple.simple/simple#//ClassOne"/>
+        href="http://simple.simple/simple102#//ClassOne"/>
   </entity>
 </emfmapping:EntityMappingsType>

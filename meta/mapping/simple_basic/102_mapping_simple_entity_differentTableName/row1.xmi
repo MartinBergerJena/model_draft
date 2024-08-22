@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<simple101:ClassOne
+<simple102:ClassOne
     xmi:version="2.0"
     xmlns:xmi="http://www.omg.org/XMI"
-    xmlns:simple101="http://simple.simple/simple101"
+    xmlns:simple102="http://simple.simple/simple102"
     attributeOne="bla"/>

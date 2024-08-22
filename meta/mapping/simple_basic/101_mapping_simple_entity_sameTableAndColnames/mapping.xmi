@@ -7,6 +7,6 @@
     xmlns:emfmapping="https://gecko.org/persistence/jpa/emfmapping">
   <entity>
     <class xsi:type="ecore:EClass"
-        href="simple.ecore#//ClassOne"/>
+        href="http://simple.simple/simple101#//ClassOne"/>
   </entity>
 </emfmapping:EntityMappingsType>
