@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emfmapping:EntityMappingsType
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:emfmapping="https://gecko.org/persistence/jpa/emfmapping">
+  <entity>
+    <table name="One"/>
+    <attributes>
+      <oneToOne
+          name="otherOne">
+        <joinColumn
+            name="otherOne_id"/>
+      </oneToOne>
+    </attributes>
+    <class xsi:type="ecore:EClass"
+        href="http://simple.simple/onetoone#//One"/>
+  </entity>
+  <entity>
+    <class xsi:type="ecore:EClass"
+        href="http://simple.simple/onetoone#//OtherOne"/>
+  </entity>
+</emfmapping:EntityMappingsType>

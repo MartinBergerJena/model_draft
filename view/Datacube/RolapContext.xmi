@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<roma:RolapContext
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:roma="https://www.daanse.org/spec/org.eclipse.daanse.rolap.mapping"
+    xsi:schemaLocation="https://www.daanse.org/spec/org.eclipse.daanse.rolap.mapping org.eclipse.daanse.rolap.mapping.ecore">
+  <dimensions
+      xsi:type="roma:StandardDimension"
+      id="1111"
+      description="bla"
+      name="DimSt1"/>
+  <hierarchies
+      id="1112"
+      description="hafjhelfwe"
+      name="Hier1"
+      hasAll="true"/>
+</roma:RolapContext>

@@ -5,6 +5,7 @@
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="documentation.en" value="data models referring to the geopolitical affiliation (e.g. nationality) of people"/>
     <details key="documentation" value="Datenmodelle bezüglich der geopolitischen Zugehörigkeit (z.B. Staatsangehörigkeit) von Personen"/>
+    <details key="caption.de" value="Nationalität"/>
   </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
@@ -15,12 +16,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="planetary affiliation of a person"/>
       <details key="documentation" value="Angehörigkeit einer person zum Planet"/>
+      <details key="caption.de" value="Planet-Zugehörigkeit"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="planet" lowerBound="1"
         eType="ecore:EClass http://model.data.jena.de/main/geographic/politics#//Planet">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="(geographical) planet related to the particular planetary affiliation"/>
         <details key="documentation" value="zugehöriger (geografischer) Planet zur jeweiligen Planeten-Zugehörigkeit"/>
+        <details key="caption.de" value="Planet"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -28,12 +31,22 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="continental affiliation corresponding to to a person's nationality according to StAG"/>
       <details key="documentation" value="Angehörigkeit zum Kontinent entsprechend der Staatsangehörigkeit einer Person gem. StAG"/>
+      <details key="caption.de" value="Kontinent-Zugehörigkeit"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="continent" lowerBound="1"
         eType="ecore:EClass http://model.data.jena.de/main/geographic/politics#//Continent">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="(geographical) continent related to the particular continental affiliation"/>
         <details key="documentation" value="zugehöriger (geografischer) Kontinent zur jeweiligen Kontinents-Zugehörigkeit"/>
+        <details key="caption.de" value="Kontinent"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="planetaryAffiliation" lowerBound="1"
+        eType="#//PlanetaryAffiliation">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="planetary affiliation related to the particular continental affiliation"/>
+        <details key="documentation" value="zugehörige Planet-Angehörigkeit zur jeweiligen Kontinent-Angehörigkeit"/>
+        <details key="caption.de" value="Planet-Angehörigkeit"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -41,12 +54,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="nationality of a person according to Staatsangehörigkeitsgesetz (StAG)"/>
       <details key="documentation" value="Staatsangehörigkeit gemäß Staatsangehörigkeitsgesetz (StAG)"/>
+      <details key="caption.de" value="Staatsangehörigkeit"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="country" lowerBound="1"
         eType="ecore:EClass http://model.data.jena.de/main/geographic/politics#//Country">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="(geographical) country related to the particular nationality"/>
         <details key="documentation" value="zugehöriger (geografischer) Staat zur jeweiligen Staatsangehörigkeit"/>
+        <details key="caption.de" value="Staat"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="continentalAffiliation"
@@ -54,6 +69,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="continental affiliation related to the particular nationality"/>
         <details key="documentation" value="zugehörige Kontinents-Angehörigkeit zur jeweiligen Staatsangehörigkeit"/>
+        <details key="caption.de" value="Kontinent-Angehörigkeit"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

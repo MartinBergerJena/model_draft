@@ -5,6 +5,7 @@
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="documentation.en" value="data models referring to official statistics"/>
     <details key="documentation" value="Datenmodelle aus dem Bereich der amtlichen Statistik"/>
+    <details key="caption.de" value="Statistik"/>
   </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
@@ -18,6 +19,7 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="number of people for official population statistics"/>
       <details key="documentation" value="Anzahl der Personen für die Bevölkerungsstatistik."/>
+      <details key="caption.de" value="Bevölkerung"/>
     </eAnnotations>
     <eAnnotations source="cube_fact">
       <details key="kind" value="true"/>
@@ -29,6 +31,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="number of people"/>
         <details key="documentation" value="Anzahl der Personen"/>
+        <details key="caption.de" value="Anzahl Personen"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="age" lowerBound="1" eType="ecore:EClass http://model.data.jena.de/main/age#//Age">
@@ -36,6 +39,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="the age of a person"/>
         <details key="documentation" value="Alter der Person"/>
+        <details key="caption.de" value="Alter"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="gender" lowerBound="1"
@@ -44,6 +48,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="gender of a person according to PersStG since its version dated 18 December 2018"/>
         <details key="documentation" value="Geschlecht der Person i.S.d. PersStG ab der Fassung vom 18.12.2018"/>
+        <details key="caption.de" value="Geschlecht (neu)"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="statisticalDistrict" lowerBound="1"
@@ -52,6 +57,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="the statistical district a person's residence is situated in"/>
         <details key="documentation" value="statistischer Bezirk, in dem der Wohnsitz einer Person liegt"/>
+        <details key="caption.de" value="Statistischer Bezirk"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="year" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
@@ -59,6 +65,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="year in which the dataset is valid"/>
         <details key="documentation" value="Jahr, für den der Datensatz gilt"/>
+        <details key="caption.de" value="Jahr"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -66,6 +73,7 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="number of people for official population statistics"/>
       <details key="documentation" value="Anzahl der Personen für die Bevölkerungsstatistik"/>
+      <details key="caption.de" value="Bevölkerung"/>
     </eAnnotations>
     <eAnnotations source="cube_fact">
       <details key="kind" value="true"/>
@@ -75,6 +83,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="birthDate of a person"/>
         <details key="documentation" value="Geburtsdatum der Person."/>
+        <details key="caption.de" value="Geburtsdatum"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="nationality" lowerBound="1"
@@ -82,12 +91,14 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="nationality of a person according to StAG"/>
         <details key="documentation" value="Staatsangehörigkeit einer Person i.S.d. StAG"/>
+        <details key="caption.de" value="Staatsagehörigkeit"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="lot" lowerBound="1" eType="ecore:EClass http://model.data.jena.de/main/geographic/cadastre#//Lot">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="the lot a person's residence is situated in"/>
         <details key="documentation" value="Flurstück, in dem der Wohnsitz einer Person liegt."/>
+        <details key="caption.de" value="Flurstück"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>

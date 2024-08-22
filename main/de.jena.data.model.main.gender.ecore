@@ -4,6 +4,7 @@
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="documentation.en" value="data models referring to gender"/>
     <details key="documentation" value="Datenmodelle bezüglich Geschlecht"/>
+    <details key="caption.de" value="Geschlecht"/>
   </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
@@ -13,18 +14,21 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="basic class providing common attributes used by specific gender structures"/>
       <details key="documentation" value="Basisklasse mit allgemeingültigen Attributen für konkrete Geschlechterstrukturen"/>
+      <details key="caption.de" value="Geschlecht"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GenderOld" eSuperTypes="#//Gender">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="Historical gender determination according to §§ 21 par.1 no. 3, 22 par. 3 PersStG until its version dated 18 November 2018 (male, female, unknown)"/>
-      <details key="documentation" value="Historische Unterscheidung des Geschlechts i.S.d. §§ 21 Abs.1 Nr. 3 und 22 Abs. 3 PersStG bis zur Fassung vom 01.11.2018 (männlich, weiblich, unbekannt)"/>
+      <details key="documentation" value="Historische Unterscheidung des Geschlechts i.S.d. §§ 21 Abs.1 Nr. 3 und 22 Abs. 3 PersStG bis zur Fassung vom 18.11.2018 (männlich, weiblich, unbekannt)"/>
+      <details key="caption.de" value="Geschlecht (alt)"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="GenderNew" eSuperTypes="#//Gender">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="Contemporary gender determination according to §§ 21 par.1 no. 3, 22 par. 3, 45 b PersStG since its version dated 18 December 2018 (male, female, diverse, unknown)"/>
       <details key="documentation" value="Derzeitige Unterscheidung des Geschlechts i.S.d. §§ 21 Abs.1 Nr. 3, 22 Abs. 3 und 45 b PersStG ab der Fassung vom 18.12.2018 (männlich, weiblich, divers, unbekannt)"/>
+      <details key="caption.de" value="Geschlecht (neu)"/>
     </eAnnotations>
   </eClassifiers>
 </ecore:EPackage>

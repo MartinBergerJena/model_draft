@@ -5,6 +5,7 @@
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
     <details key="documentation.en" value="data models referring to geographical objects representing political areas"/>
     <details key="documentation" value="Datenmodelle zu geografischen Objekten bezüglich politischer Gebiete"/>
+    <details key="caption.de" value="Geoobjekte politisch"/>
   </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
@@ -14,12 +15,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="basic class providing attributes concerning country codes"/>
       <details key="documentation" value="Basisklasse mit Attributen für Objekte, die Ländercodes aufweisen"/>
+      <details key="caption.de" value="Ländercode-Daten"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeDestatisBEV" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="country code used by the German Federal Statistical Office"/>
         <details key="documentation" value="Ländercode des deutschen Bundesamtes für Statistik"/>
+        <details key="caption.de" value="Ländercode Destatis"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeIso31661Alpha2" lowerBound="1"
@@ -27,6 +30,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="international country code according to ISO 3166-1 ALPHA-2"/>
         <details key="documentation" value="Internationaler Ländercode gemäß ISO 3166-1 ALPHA-2"/>
+        <details key="caption.de" value="Ländercode ISO 3166-1 ALPHA-2"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeIso31661Alpha3" lowerBound="1"
@@ -34,6 +38,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="international country code according to ISO 3166-1 ALPHA-3"/>
         <details key="documentation" value="Internationaler Ländercode gemäß ISO 3166-1 ALPHA-3"/>
+        <details key="caption.de" value="Ländercode ISO 3166-1 ALPHA-3"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeIso31661Numeric" lowerBound="1"
@@ -41,6 +46,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="international numeric country code according to ISO 3166-1 classification"/>
         <details key="documentation" value="Internationaler numerischer Ländercode gemäß ISO 3166-1-Klassifikation"/>
+        <details key="caption.de" value="Ländercode ISO 3166-1 numerisch"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -48,12 +54,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="basic class of all UniqueIdentifiableObjects having a country code"/>
       <details key="documentation" value="Basisklasse für alle UniqueIdentifiableObjects, die Ländercode aufweisen"/>
+      <details key="caption.de" value="Ländercode-Objekt"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="countryCodeData" lowerBound="1"
         eType="#//CountryCodeData" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="the CountryCodeData of an object"/>
         <details key="documentation" value="CountryCodeData eines Objekts"/>
+        <details key="caption.de" value="Ländercode-Daten"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -61,12 +69,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="basic class providing attributes concerning regional codes"/>
       <details key="documentation" value="Basisklasse mit Attributen für Objekte, die Regionalcodes aufweisen"/>
+      <details key="caption.de" value="Regionalcode-Daten"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeRegion" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="official regional code (ARS) determined by the Statistical Offices of the German federated states"/>
         <details key="documentation" value="amtlicher Regionalschlüssel (ARS), der durch die Statistischen Ämter der einzelnen Bundesländer vergeben wird"/>
+        <details key="caption.de" value="Regionalcode ARS"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -75,12 +85,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="basic class of all UniqueIdentifiableObjects having regionaly codes"/>
       <details key="documentation" value="Basisklasse für alle UniqueIdentifiableObjects, die Regionalcodes aufweisen"/>
+      <details key="caption.de" value="Regionalcode-Objekt"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="regionalCodeData" lowerBound="1"
         eType="#//RegionalCodeData" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="the RegionalCodeData of an object"/>
         <details key="documentation" value="RegionalCodeData eines Objekts"/>
+        <details key="caption.de" value="Regionalcode-Daten"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -88,12 +100,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="basic class providing attributes concerning municipality codes"/>
       <details key="documentation" value="Basisklasse mit Attributen für Objekte, die Gemeindecodes aufweisen"/>
+      <details key="caption.de" value="Gemeindecode-Daten"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="codeMunicipality" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="official municipality code (AGS) determined by the Statistical Offices of the federal states"/>
         <details key="documentation" value="amtlicher Gemeindeschlüssel (AGS), der durch die Statistischen Ämter der einzelnen Bundesländer vergeben wird"/>
+        <details key="caption.de" value="Gemeindecode"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -102,12 +116,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="basic class of all UniqueIdentifiableObjects having municipality codes"/>
       <details key="documentation" value="Basisklasse für alle UniqueIdentifiableObjects, die Gemeindecodes aufweisen"/>
+      <details key="caption.de" value="Gemeindecode-Objekt"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="municipalityCodeData" lowerBound="1"
         eType="#//MunicipalityCodeData" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="the MunicipalityCodeData of an object"/>
         <details key="documentation" value="MunicipalityCodeData eines Objekts"/>
+        <details key="caption.de" value="Gemeindecode-Daten"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -115,18 +131,21 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="geographical object representing a planet"/>
       <details key="documentation" value="geografisches Objekt, das einen Planeten darstellt"/>
+      <details key="caption.de" value="Planet"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Continent" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//ValidityDurationObject">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="geographical object representing a continent"/>
       <details key="documentation" value="geografisches Objekt, das einen Kontinent darstellt"/>
+      <details key="caption.de" value="Kontinent"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="planet" lowerBound="1"
         eType="#//Planet" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="the planet the continent belongs to"/>
         <details key="documentation" value="Planet, dem der Kontinent angehört"/>
+        <details key="caption.de" value="Planet"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -134,12 +153,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="geographical object representing a country recognized by the German Federal Republic"/>
       <details key="documentation" value="geografisches Objekt, das einen von der Bundesrepublik Deutschland anerkannten Staat darstellt"/>
+      <details key="caption.de" value="Staat"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="continent" lowerBound="1"
         eType="#//Continent" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="the continent the country belongs to"/>
         <details key="documentation" value="Kontinent, dem der Staat angehört"/>
+        <details key="caption.de" value="Kontinent"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -147,12 +168,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="geographical object representing a federal state"/>
       <details key="documentation" value="geografisches Objekt, das ein Bundesland darstellt"/>
+      <details key="caption.de" value="Bundesland"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="country" lowerBound="1"
         eType="#//Country" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="the country the federal state belongs to"/>
         <details key="documentation" value="Staat, dem das Bundesland angehört"/>
+        <details key="caption.de" value="Staat"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -160,12 +183,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="geographical object representing a county or a town independent of a county"/>
       <details key="documentation" value="geografisches Objekt, das einen Landkreis oder eine kreifreie Stadt darstellt"/>
+      <details key="caption.de" value="Landkreis"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="federalState" lowerBound="1"
         eType="#//FederalState" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="the federal state the county or independent town belongs to"/>
         <details key="documentation" value="Bundesland, dem der Landkreis bzw. die kreisfreie Stadt angehört"/>
+        <details key="caption.de" value="Bundesland"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -173,12 +198,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="geographical object representing a municipal association"/>
       <details key="documentation" value="geografisches Objekt, das einen Gemeindeverband darstellt"/>
+      <details key="caption.de" value="Gemeindeverband"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="county" lowerBound="1"
         eType="#//County">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="the county the municipal association belongs to"/>
         <details key="documentation" value="der Landkreis, dem der Gemeindeverband angehört"/>
+        <details key="caption.de" value="Landkreis"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -186,12 +213,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="geographical object representing a municipality or non-municipal area"/>
       <details key="documentation" value="geografisches Objekt, das eine Gemeinde oder gemeindefreies Gebiet darstellt"/>
+      <details key="caption.de" value="Gemeinde"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="municipalAssociation" eType="#//MunicipalAssociation"
         containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="the municipal association the municipality belongs to"/>
         <details key="documentation" value="der Gemeindeverband, dem die Gemeinde angehört"/>
+        <details key="caption.de" value="Gemeindeverband"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="county" lowerBound="1"
@@ -199,6 +228,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="the county the municipality belongs to"/>
         <details key="documentation" value="der Landkreis, dem die Gemeinde angehört"/>
+        <details key="caption.de" value="Landkreis"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -206,13 +236,17 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="geographical object representing an (urban) district"/>
       <details key="documentation" value="geografisches Objekt, das einen Ortsteil darstellt"/>
+      <details key="caption.de" value="Ortsteil"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="municipality" lowerBound="1"
         eType="#//Municipality" containment="true">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="the municipality the urban district belongs to"/>
         <details key="documentation" value="die Gemeindeverband, dem der Ortsteil angehört"/>
+        <details key="caption.de" value="Gemeinde"/>
       </eAnnotations>
     </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="landtagConstituency" lowerBound="1"
+        eType="ecore:EClass http://model.data.jena.de/main/geographic/election#//LandtagConstituency"/>
   </eClassifiers>
 </ecore:EPackage>

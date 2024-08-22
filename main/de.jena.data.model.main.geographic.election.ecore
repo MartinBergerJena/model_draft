@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="geographic.election" nsURI="http://model.data.jena.de/main/geographic/election"
+    nsPrefix="main_geographic_election">
+  <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+    <details key="documentation" value="Datenmodelle zu geografischen Objekten im Zusammenhang mit Wahlen"/>
+    <details key="documentation.en" value="data models referring to geographical objects concerning elections"/>
+    <details key="caption.de" value="Geoobjekte in Bezug auf Wahlen"/>
+  </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="ElectoralDistrict" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//ValidityDurationObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value=""/>
+      <details key="documentation.en" value=""/>
+      <details key="caption.de" value="Wahlbezirk"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+        <details key="documentation.en" value=""/>
+        <details key="caption.de" value="Nummer"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="district" lowerBound="1"
+        eType="ecore:EClass http://model.data.jena.de/main/geographic/politics#//District">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+        <details key="documentation.en" value=""/>
+        <details key="caption.de" value="Ortsteil"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="postalVotingDistrict" lowerBound="1">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+        <details key="documentation.en" value=""/>
+        <details key="caption.de" value="Briefwahlbezirk"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PostalVotingDistrict">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value=""/>
+      <details key="documentation.en" value=""/>
+      <details key="caption.de" value="Briefwahlbezirk"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+        <details key="documentation.en" value=""/>
+        <details key="caption.de" value="Nummer"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="LandtagConstituency">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value=""/>
+      <details key="documentation.en" value=""/>
+      <details key="caption.de" value="Landtagswahlkreis"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation" value=""/>
+        <details key="documentation.en" value=""/>
+        <details key="caption.de" value="Nummer"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+</ecore:EPackage>
