@@ -2,8 +2,9 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="age" nsURI="http://model.data.jena.de/main/age" nsPrefix="main_age">
   <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-    <details key="documentation.en" value="data models referring to age"/>
-    <details key="documentation" value="Datenmodelle bezüglich Alter"/>
+    <details key="documentation.en" value="data models referring to age, birth dates and generations"/>
+    <details key="documentation" value="Datenmodelle bezüglich Alter, Geburtsdaten und Generationen"/>
+    <details key="caption.de" value="Alter, Geburtsdatum und Generation"/>
   </eAnnotations>
   <eAnnotations source="http://www.eclipse.org/OCL/Import">
     <details key="ecore" value="http://www.eclipse.org/emf/2002/Ecore"/>
@@ -13,11 +14,13 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="class containing the age of an object in years"/>
       <details key="documentation" value="Klasse für das Alter eines Objektes in Jahren"/>
+      <details key="caption.de" value="Alter"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="age" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="age in years"/>
         <details key="documentation" value="Alter in Jahren"/>
+        <details key="caption.de" value="Alter"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -25,12 +28,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="Basic class providing common attributes used by specific age group structures"/>
       <details key="documentation" value="Basisklasse mit allgemeingültigen Attributen für konkrete Altersgruppenstrukturen"/>
+      <details key="caption.de" value="Altersgruppe"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ageInterval" lowerBound="1"
         eType="ecore:EClass http://model.data.jena.de/main/common#//SpecifiedIntegerInterval">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="age interval in years which forms the limits of the age group"/>
         <details key="documentation" value="das Altersintervall in Jahren, das die Grenzen für die Altersgruppe bildet"/>
+        <details key="caption.de" value="Altersintervall"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ages" lowerBound="1" upperBound="-1"
@@ -38,6 +43,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="Reference to ages which are included in an age group"/>
         <details key="documentation" value="Referenz auf die Alter, die in der Altersgruppe enthalten sind"/>
+        <details key="caption.de" value="Alter"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -45,60 +51,70 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="age groups consisting of a single age in (completed) years"/>
       <details key="documentation" value="einzelne Altersjahrgänge in vollendeten Lebensjahren"/>
+      <details key="caption.de" value="Altersjahrgang"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AgeGroupStatiticsStandard" eSuperTypes="#//AgeGroup">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="age structure commonly used in the urban population statistics (0 to 2, 3 to 5, 6 to 9, 10 to 15, 16 to 17, 18 to 24, 25 to 26, 27 to 44, 45 to 59, 60 to 64 and from 65 years)"/>
       <details key="documentation" value="In der städtischen Bevölkerungsstatistik standardmäßig genutze Altersgruppenstruktur (0-2, 3-5, 6-9, 10-15, 16-17, 18-24, 25-26, 27-44, 45-59, 60-64 Jahre sowie 65 Jahre und älter)"/>
+      <details key="caption.de" value="Standardaltersgruppe Statistik"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AgeGroupAdultsDetail5Years" eSuperTypes="#//AgeGroup">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="age strucutre which distinguishes age groups of 0 to 17, 18 to 24, 25 to 69 in groups of 5 years and from 70 years"/>
       <details key="documentation" value="Altersgruppenstruktur mit Untergliederung Gruppen von 0-17 Jahren, 18-24 Jahren, von 25-69 Jahren in 5-Jahres-Gruppen sowie ab 70 Jahren"/>
+      <details key="caption.de" value="Altersgruppe Erwachsene in 5-Jahres-Gruppen"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AgeGroupDetailSeniors5Years" eSuperTypes="#//AgeGroup">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="age strucutre which distinguishes age groups from 0 to 2, 3 to 17, 18 to 44, 45 to 59, 60 to 89 in groups of 5 years and from 90 years"/>
       <details key="documentation" value="Altersgruppenstruktur mit Untergliederung Gruppen von 0-2 Jahren, 3-17 Jahren, 18-44 Jahren, 45-59 Jahren, 60-89 Jahren in 5-Jahres-Gruppen sowie ab 90 Jahren"/>
+      <details key="caption.de" value="Altersgruppe Senioren in 5-Jahres-Gruppen"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AgeGroups10Years" eSuperTypes="#//AgeGroup">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="age structure consisting of age groups of 10 years"/>
       <details key="documentation" value="Altersgruppenstruktur mit Untergliederung in 10-Jahres-Gruppen"/>
+      <details key="caption.de" value="10-Jahres-Altersgruppe"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AgeGroupMinorsDetail" eSuperTypes="#//AgeGroup">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="age structure which distinguishes between minors in age groups of 0 to 2, 3 to 5, 6 to 9, 10 to 15, 16 to 17 years and adults from 18 years"/>
       <details key="documentation" value="Altersgruppenstruktur mit Unterscheidung von Minderjähringen, unterteilt in Gruppen von 0-2, 3-5, 6-9, 10-15 und 16-17 Jahren, sowie Volljährige ab 18 Jahren"/>
+      <details key="caption.de" value="Altersgruppe Kinder detailliert"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AgeGroupRKIClassificaion" eSuperTypes="#//AgeGroup">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="age structure according to the Robert Koch Institute, distinguishing age groups of 0 to 4, 5 to 14, 15 to 34, 35 to 59, 60 to 79 and from 80 years"/>
       <details key="documentation" value="Altersgruppenstruktur entsprechend der Systematik des Robert-Koch-Institutes mit Untergliederung Gruppen von 0-4, 5-14, 15-34, 35-59, 60-79 sowie ab 80 Jahren"/>
+      <details key="caption.de" value="Altergruppe RKI-Klassifikation"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AgeGroupCovidStatistics" eSuperTypes="#//AgeGroup">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="age structure according to the urban Covid-19 statistics, distinguishing age groups of 0 to 4, 5 to 14, 15 to 34, 35 to 59, 60 to 79 and from 80 years"/>
       <details key="documentation" value="Altersgruppenstruktur gemäß städtischer Covid-19-Statistik mit Untergliederung Gruppen von 0-5, 6-9, 10-17, 18-26, 27-44, 45-64, 65-79 sowie ab 80 Jahren"/>
+      <details key="caption.de" value="Altersgruppe Covid-Statistik"/>
     </eAnnotations>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BirthDate" eSuperTypes="http://model.data.jena.de/main/common#//UniqueIdentifiableObject">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="date of birth"/>
       <details key="documentation" value="Datum der Geburt"/>
+      <details key="caption.de" value="Geburtsdatum"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="birthDate" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="date of birth"/>
         <details key="documentation" value="Datum der Geburt"/>
+        <details key="caption.de" value="Geburtsdatum"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -106,12 +122,14 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="Basic class for all generation structures"/>
       <details key="documentation" value="Basisklasse für alle Generationenstrukturen"/>
+      <details key="caption.de" value="Generation"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="birthDateInterval" lowerBound="1"
         eType="ecore:EClass http://model.data.jena.de/main/common#//SpecifiedDateInterval">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="Interval of birth dates which forms the limits of the generation"/>
         <details key="documentation" value="Intervall der Geburtsdaten, das die Grenzen für die Generationen bildet"/>
+        <details key="caption.de" value="Geburtsdatums-Intervall"/>
       </eAnnotations>
     </eStructuralFeatures>
     <eStructuralFeatures xsi:type="ecore:EReference" name="birthDates" lowerBound="1"
@@ -119,6 +137,7 @@
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value="Reference to birth dates which are included in a generation"/>
         <details key="documentation" value="Referenz zu Geburtsdaten, die in der jeweiligen Generation enthalten sind"/>
+        <details key="caption.de" value="Geburtsdaten"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -126,6 +145,7 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="Determination of generations according to the year of birth as Lost Generation (geb. 1883-1900), Greatest Generation (1901-1927), Silent Generation (1928-1945), Baby Boomers (1946-1964), Generation X (1965-1980), Millenials/Generation Y (1981-1996), Zoomers/Generation Z (1997-2012) and Generation Alpha (from 2013)"/>
       <details key="documentation" value="Unterscheidung der Generationen anhand des Geburtsjahres in Lost Generation (geb. 1883-1900), Greatest Generation (1901-1927), Silent Generation (1928-1945), Baby Boomers (1946-1964), Generation X (1965-1980), Millenials/Generation Y (1981-1996), Zoomers/Generation Z (1997-2012) und Generation Alpha (ab 2013)"/>
+      <details key="caption.de" value="Generation Standard"/>
     </eAnnotations>
   </eClassifiers>
 </ecore:EPackage>
