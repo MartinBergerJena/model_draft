@@ -182,7 +182,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="County" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//ValidityDurationObject #//RegionalCodeObject">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="geographical object representing a county or a town independent of a county"/>
-      <details key="documentation" value="geografisches Objekt, das einen Landkreis oder eine kreifreie Stadt darstellt"/>
+      <details key="documentation" value="geografisches Objekt, das einen Landkreis oder eine kreisfreie Stadt darstellt"/>
       <details key="caption.de" value="Landkreis"/>
     </eAnnotations>
     <eStructuralFeatures xsi:type="ecore:EReference" name="federalState" lowerBound="1"
@@ -194,22 +194,29 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="MunicipalAssociation" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//ValidityDurationObject #//RegionalCodeObject">
+  <eClassifiers xsi:type="ecore:EClass" name="MunicipalUnit" abstract="true" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/geographic/politics#//MunicipalityCodeObject http://model.data.jena.de/main/geographic/politics#//RegionalCodeObject http://model.data.jena.de/main/common#//ValidityDurationObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="abstract geographical class representing a municipal territorial unit"/>
+      <details key="documentation" value="abstraktes geografisches Objekt, das eine gemeindliche Gebietseinheit (Gemeinde oder Gemeindeverband) beinhaltet"/>
+      <details key="caption.de" value="Gemeindliche Gebietseinheit"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="county" lowerBound="1"
+        eType="#//County" containment="true">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="the county the municipal unit (municipality or municipal association) belongs to"/>
+        <details key="documentation" value="der Landkreis, dem die gemeindliche Gebietseinheit (Gemeinde oder Gemeindeverband) angehört"/>
+        <details key="caption.de" value="Landkreis"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MunicipalAssociation" eSuperTypes="#//MunicipalUnit">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="geographical object representing a municipal association"/>
       <details key="documentation" value="geografisches Objekt, das einen Gemeindeverband darstellt"/>
       <details key="caption.de" value="Gemeindeverband"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="county" lowerBound="1"
-        eType="#//County">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation.en" value="the county the municipal association belongs to"/>
-        <details key="documentation" value="der Landkreis, dem der Gemeindeverband angehört"/>
-        <details key="caption.de" value="Landkreis"/>
-      </eAnnotations>
-    </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Municipality" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//ValidityDurationObject #//MunicipalityCodeObject #//RegionalCodeObject">
+  <eClassifiers xsi:type="ecore:EClass" name="Municipality" eSuperTypes="#//MunicipalUnit">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value="geographical object representing a municipality or non-municipal area"/>
       <details key="documentation" value="geografisches Objekt, das eine Gemeinde oder gemeindefreies Gebiet darstellt"/>
@@ -221,14 +228,6 @@
         <details key="documentation.en" value="the municipal association the municipality belongs to"/>
         <details key="documentation" value="der Gemeindeverband, dem die Gemeinde angehört"/>
         <details key="caption.de" value="Gemeindeverband"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="county" lowerBound="1"
-        eType="#//County" containment="true">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation.en" value="the county the municipality belongs to"/>
-        <details key="documentation" value="der Landkreis, dem die Gemeinde angehört"/>
-        <details key="caption.de" value="Landkreis"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
