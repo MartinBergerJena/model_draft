@@ -13,58 +13,22 @@
     <details key="main_geographic_election" value="http://model.data.jena.de/main/geographic/election"/>
     <details key="main_geographic_politics" value="http://model.data.jena.de/main/geographic/politics"/>
   </eAnnotations>
-  <eClassifiers xsi:type="ecore:EClass" name="Address" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//ValidityDurationObject">
+  <eClassifiers xsi:type="ecore:EClass" name="PostalCodeArea" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//ValidityDurationObject">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value=""/>
       <details key="documentation" value=""/>
-      <details key="caption.de" value="Adresse"/>
+      <details key="caption.de" value="PLZ-Gebiet"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="street" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="postalCode" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value=""/>
         <details key="documentation" value=""/>
-        <details key="caption.de" value="Straße"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="houseNumber" lowerBound="1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation.en" value=""/>
-        <details key="documentation" value=""/>
-        <details key="caption.de" value="Hausnummer"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="houseNumberAddition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation.en" value=""/>
-        <details key="documentation" value=""/>
-        <details key="caption.de" value="Hausnummern-Zusatz"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="residentialBlockSide" lowerBound="1"
-        eType="#//ResidentialBlockSide">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation.en" value=""/>
-        <details key="documentation" value=""/>
-        <details key="caption.de" value="Baublockseite"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="hectareGridCell" lowerBound="1"
-        eType="#//HectareGridCell">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation.en" value=""/>
-        <details key="documentation" value=""/>
-        <details key="caption.de" value="Hektarraster-Zelle"/>
+        <details key="caption.de" value="Postleitzahl"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ResidentialBlockSide" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//ValidityDurationObject">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation.en" value=""/>
-      <details key="documentation" value=""/>
-      <details key="caption.de" value="Baublockseite"/>
-    </eAnnotations>
+  <eClassifiers xsi:type="ecore:EClass" name="BundesArbeitsAgenturDistrict" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//ValidityDurationObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -73,12 +37,49 @@
         <details key="caption.de" value="Nummer"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="residentialBlock" lowerBound="1"
-        eType="#//ResidentialBlock">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="planningArea" lowerBound="1"
+        eType="#//PlanningArea">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation.en" value=""/>
-        <details key="documentation" value=""/>
-        <details key="caption.de" value="Baublock"/>
+        <details key="documentation.en" value="strategic area in which the statistical district is situated"/>
+        <details key="caption.de" value="Planungsraum"/>
+        <details key="documentation" value="statistischer Planungsraum, in dem sich der statistische Bezirk befindet"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="HectareGridCell" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalData http://model.data.jena.de/main/common#//ValidityDurationObject http://model.data.jena.de/main/common#//CommonMetaDataObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value=""/>
+      <details key="documentation" value=""/>
+      <details key="caption.de" value="Hektarraster-Zelle"/>
+    </eAnnotations>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="PlanningArea" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//ValidityDurationObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="planning area in the meaning of a geographical object consisting of statistical districts and used in official statistics"/>
+      <details key="caption.de" value="Planungsraum"/>
+      <details key="documentation" value="statistischer Planungsraum im Sinne eines räumlichen Objektes, das im Bereich der amtlichen Statistik aus statistischen Bezirken gebildet wird"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="municipality" lowerBound="1"
+        eType="ecore:EClass http://model.data.jena.de/main/geographic/politics#//Municipality">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="Municipality in which the planning area is situated"/>
+        <details key="caption.de" value="Gemeinde"/>
+        <details key="documentation" value="Gemeinde, in dem sich der Planungsraum befindet"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="StatisticalDistrict" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//ValidityDurationObject">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation.en" value="statistical district in the meaning of a geographical object consisting of residential blocks and used in official statistics"/>
+      <details key="caption.de" value="Statistischer Bezirk"/>
+      <details key="documentation" value="Statistischer Bezirk im Sinne eines räumlichen Objektes, das im Bereich der amtlichen Statistik aus Baublöcken gebildet wird"/>
+    </eAnnotations>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="planningArea" lowerBound="1"
+        eType="#//PlanningArea">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value="strategic area in which the statistical district is situated"/>
+        <details key="caption.de" value="Planungsraum"/>
+        <details key="documentation" value="statistischer Planungsraum, in dem sich der statistische Bezirk befindet"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
@@ -129,44 +130,12 @@
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="StatisticalDistrict" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//ValidityDurationObject">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation.en" value="statistical district in the meaning of a geographical object consisting of residential blocks and used in official statistics"/>
-      <details key="caption.de" value="Statistischer Bezirk"/>
-      <details key="documentation" value="Statistischer Bezirk im Sinne eines räumlichen Objektes, das im Bereich der amtlichen Statistik aus Baublöcken gebildet wird"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="planningArea" lowerBound="1"
-        eType="#//PlanningArea">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation.en" value="strategic area in which the statistical district is situated"/>
-        <details key="caption.de" value="Planungsraum"/>
-        <details key="documentation" value="statistischer Planungsraum, in dem sich der statistische Bezirk befindet"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PlanningArea" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//ValidityDurationObject">
-    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-      <details key="documentation.en" value="planning area in the meaning of a geographical object consisting of statistical districts and used in official statistics"/>
-      <details key="caption.de" value="Planungsraum"/>
-      <details key="documentation" value="statistischer Planungsraum im Sinne eines räumlichen Objektes, das im Bereich der amtlichen Statistik aus statistischen Bezirken gebildet wird"/>
-    </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="municipality" lowerBound="1"
-        eType="ecore:EClass http://model.data.jena.de/main/geographic/politics#//Municipality">
-      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation.en" value="Municipality in which the planning area is situated"/>
-        <details key="caption.de" value="Gemeinde"/>
-        <details key="documentation" value="Gemeinde, in dem sich der Planungsraum befindet"/>
-      </eAnnotations>
-    </eStructuralFeatures>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="HectareGridCell" eSuperTypes="http://model.data.jena.de/main/common#//GeographicalData http://model.data.jena.de/main/common#//ValidityDurationObject http://model.data.jena.de/main/common#//CommonMetaDataObject">
+  <eClassifiers xsi:type="ecore:EClass" name="ResidentialBlockSide" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//ValidityDurationObject">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value=""/>
       <details key="documentation" value=""/>
-      <details key="caption.de" value="Hektarraster-Zelle"/>
+      <details key="caption.de" value="Baublockseite"/>
     </eAnnotations>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BundesArbeitsAgenturDistrict" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//ValidityDurationObject">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="number" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
@@ -175,27 +144,58 @@
         <details key="caption.de" value="Nummer"/>
       </eAnnotations>
     </eStructuralFeatures>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="planningArea" lowerBound="1"
-        eType="#//PlanningArea">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="residentialBlock" lowerBound="1"
+        eType="#//ResidentialBlock">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
-        <details key="documentation.en" value="strategic area in which the statistical district is situated"/>
-        <details key="caption.de" value="Planungsraum"/>
-        <details key="documentation" value="statistischer Planungsraum, in dem sich der statistische Bezirk befindet"/>
+        <details key="documentation.en" value=""/>
+        <details key="documentation" value=""/>
+        <details key="caption.de" value="Baublock"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="PostalCodeArea" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//ValidityDurationObject">
+  <eClassifiers xsi:type="ecore:EClass" name="Address" eSuperTypes="http://model.data.jena.de/main/common#//CommonMetaDataObject http://model.data.jena.de/main/common#//GeographicalObject http://model.data.jena.de/main/common#//ValidityDurationObject">
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation.en" value=""/>
       <details key="documentation" value=""/>
-      <details key="caption.de" value="PLZ-Gebiet"/>
+      <details key="caption.de" value="Adresse"/>
     </eAnnotations>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="postalCode" lowerBound="1"
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="street" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
       <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
         <details key="documentation.en" value=""/>
         <details key="documentation" value=""/>
-        <details key="caption.de" value="Postleitzahl"/>
+        <details key="caption.de" value="Straße"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="houseNumber" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value=""/>
+        <details key="documentation" value=""/>
+        <details key="caption.de" value="Hausnummer"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="houseNumberAddition" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value=""/>
+        <details key="documentation" value=""/>
+        <details key="caption.de" value="Hausnummern-Zusatz"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="residentialBlockSide" lowerBound="1"
+        eType="#//ResidentialBlockSide">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value=""/>
+        <details key="documentation" value=""/>
+        <details key="caption.de" value="Baublockseite"/>
+      </eAnnotations>
+    </eStructuralFeatures>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="hectareGridCell" lowerBound="1"
+        eType="#//HectareGridCell">
+      <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+        <details key="documentation.en" value=""/>
+        <details key="documentation" value=""/>
+        <details key="caption.de" value="Hektarraster-Zelle"/>
       </eAnnotations>
     </eStructuralFeatures>
   </eClassifiers>
