@@ -21,7 +21,7 @@
             table="primaryTable"/>
         <name
             xsi:type="ecore:EAttribute"
-            href="simple201.ecore#//ClassOne/attributeOne"/>
+            href="http://simple.simple/simple201#//ClassOne/attributeOne"/>
       </basic>
       <basic>
         <column
@@ -29,10 +29,10 @@
             table="secondaryTable"/>
         <name
             xsi:type="ecore:EAttribute"
-            href="simple201.ecore#//ClassOne/attributeTwo"/>
+            href="http://simple.simple/simple201#//ClassOne/attributeTwo"/>
       </basic>
     </attributes>
     <class xsi:type="ecore:EClass"
-        href="simple201.ecore#//ClassOne"/>
+        href="http://simple.simple/simple201#//ClassOne"/>
   </entity>
 </emfmapping:EntityMappingsType>
