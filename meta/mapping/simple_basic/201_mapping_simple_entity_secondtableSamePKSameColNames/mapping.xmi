@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emfmapping:EntityMappingsType
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:emfmapping="https://gecko.org/persistence/jpa/emfmapping">
+  <entity>
+    <table name="primaryTable"/>
+    <secondaryTable
+        name="secondaryTable"/>
+    <attributes>
+      <id name="id">
+        <column
+            name="id"
+            table="primaryTable"/>
+      </id>
+      <basic>
+        <column
+            name="attributeOne"
+            table="primaryTable"/>
+        <name
+            xsi:type="ecore:EAttribute"
+            href="simple201.ecore#//ClassOne/attributeOne"/>
+      </basic>
+      <basic>
+        <column
+            name="attributeTwo"
+            table="secondaryTable"/>
+        <name
+            xsi:type="ecore:EAttribute"
+            href="simple201.ecore#//ClassOne/attributeTwo"/>
+      </basic>
+    </attributes>
+    <class xsi:type="ecore:EClass"
+        href="simple201.ecore#//ClassOne"/>
+  </entity>
+</emfmapping:EntityMappingsType>

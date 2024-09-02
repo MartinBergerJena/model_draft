@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simple201:ClassOne
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:simple201="http://simple.simple/simple201"
+    xsi:schemaLocation="http://simple.simple/simple201 simple201.ecore"
+    id="1" attributeOne="bla"
+    attributeTwo="blub"/>
