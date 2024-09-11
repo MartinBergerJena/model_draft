@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simple204:ClassOne
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:simple204="http://simple.simple/simple204"
+    xsi:schemaLocation="http://simple.simple/simple204 simple204.ecore"
+    id="2" attributeOne="blabla"/>
