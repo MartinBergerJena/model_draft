@@ -21,7 +21,7 @@
       </id>
       <basic>
         <column
-            name="attributeOne"
+            name="one"
             table="primaryTable"/>
         <name
             xsi:type="ecore:EAttribute"
@@ -29,7 +29,7 @@
       </basic>
       <basic>
         <column
-            name="attributeTwo"
+            name="two"
             table="secondaryTable"/>
         <name
             xsi:type="ecore:EAttribute"
