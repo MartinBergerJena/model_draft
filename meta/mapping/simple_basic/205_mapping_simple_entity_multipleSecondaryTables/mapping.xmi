@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<emfmapping:EntityMappingsType
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:emfmapping="https://gecko.org/persistence/jpa/emfmapping">
+  <entity>
+    <table name="primaryTable"/>
+    <secondaryTable
+        name="secondaryTableOne">
+      <primaryKeyJoinColumn/>
+    </secondaryTable>
+    <secondaryTable
+        name="secondaryTableTwo">
+      <primaryKeyJoinColumn/>
+    </secondaryTable>
+    <attributes>
+      <id name="id">
+        <column
+            name="id"
+            table="primaryTable"/>
+      </id>
+      <basic>
+        <column
+            name="one"
+            table="primaryTable"/>
+        <name
+            xsi:type="ecore:EAttribute"
+            href="simple205.ecore#//ClassOne/attributeOne"/>
+      </basic>
+      <basic>
+        <column
+            name="two"
+            table="secondaryTableOne"/>
+        <name
+            xsi:type="ecore:EAttribute"
+            href="simple205.ecore#//ClassOne/attributeTwo"/>
+      </basic>
+      <basic>
+        <column
+            name="three"
+            table="secondaryTableTwo"/>
+        <name
+            xsi:type="ecore:EAttribute"
+            href="simple205.ecore#//ClassOne/attributeThree"/>
+      </basic>
+    </attributes>
+    <class xsi:type="ecore:EClass"
+        href="simple205.ecore#//ClassOne"/>
+  </entity>
+</emfmapping:EntityMappingsType>
