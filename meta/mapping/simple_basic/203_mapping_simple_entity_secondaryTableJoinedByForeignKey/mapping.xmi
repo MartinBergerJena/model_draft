@@ -11,7 +11,7 @@
         name="secondaryTable">
       <primaryKeyJoinColumn
           name="sec_id"
-          referencedColumnName="sec_id"/>
+          referencedColumnName="fk_sec_id"/>
     </secondaryTable>
     <attributes>
       <id name="id">
